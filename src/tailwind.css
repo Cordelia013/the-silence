@@ -1,0 +1,7 @@
+
+@import "tailwindcss";
+
+/* Configuration Tailwind v4 */
+@config {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'];
+}

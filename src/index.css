@@ -1,7 +1,5 @@
-/* === TAILWINDCSS BASE === */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+
 
 /* === CUSTOM SCROLLBAR (optional, design) === */
 ::-webkit-scrollbar {
