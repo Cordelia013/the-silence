@@ -1,15 +1,56 @@
-/* Reset de base pour éviter les débordements */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
-}
+/* src/index.css */
 
-/* S'assurer que rien ne dépasse */
-* {
+/* Reset complet avec background noir */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Pour ton container */
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background-color: #000000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: #000000;
+  color: #ffffff; /* Texte blanc par défaut pour contraste */
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #000;
+  color: #fff;
+}
+
+/* Container responsive */
 .container {
-  @apply px-4 max-w-full overflow-hidden;
+  @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden;
+}
+
+/* Éviter les débordements d'images et SVG */
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Couleurs de texte par défaut */
+h1, h2, h3, h4, h5, h6, p, span, div {
+  color: inherit;
+}
+
+/* Links en blanc */
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
 }

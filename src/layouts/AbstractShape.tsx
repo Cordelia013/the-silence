@@ -2,13 +2,11 @@ import React from "react";
 
 const AbstractShape: React.FC = () => (
   <svg
-    
-    width="411"
-    height="665"
-    viewBox="0 0 612 975"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="object-contain"
+  viewBox="0 0 612 975"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+  className="w-full h-full max-w-full max-h-full object-contain"
+  preserveAspectRatio="xMidYMid meet"
   >
     <line
       x1="409.498"
