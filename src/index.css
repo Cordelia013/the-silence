@@ -1,41 +1,9 @@
-
-
-
-/* === CUSTOM SCROLLBAR (optional, design) === */
-::-webkit-scrollbar {
-  width: 10px;
-  background: transparent;
-}
-::-webkit-scrollbar-thumb {
-  background: #24292f;
-  border-radius: 4px;
-}
-
-/* === FONT FAMILY (example) === */
 body {
-  font-family: 'Space Grotesk', system-ui, sans-serif;
+  margin: 0;
+font-family: 'Space Grotesk', sans-serif;
   background-color: #151515;
-  color: #fff;
+  color: #ffff;
+  margin-left: 117px;
+  margin-right: 117px;
+ 
 }
-
-
-
-/* === CUSTOM SELECTION (juste pour le style) === */
-::selection {
-  background: #ffe082;
-  color: #111;
-}
-
-/* === ANIMATIONS CSS EXAMPLES (tu peux t'en servir plus tard) === */
-@keyframes rotate-slow {
-  from { transform: rotate(0deg);}
-  to { transform: rotate(360deg);}
-}
-
-/* === EXEMPLE D'UTILISATION CUSTOM CLASS === */
-.animate-rotate-slow {
-  animation: rotate-slow 8s linear infinite;
-}
-
-/* === PLACEHOLDER POUR TES STYLES PERSO === */
-/* Ajoute ici tes classes CSS custom ou overrides si besoin */
