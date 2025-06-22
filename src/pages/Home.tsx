@@ -9,7 +9,7 @@ function Home() {
   const [showLoader, setShowLoader] = useState(true);
 
   return (
-    <div className="text-2xl min-h-screen  overflow-hidden">
+    <div className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
       {showLoader ? (
         <HomeLoader onContinue={() => setShowLoader(false)} />
       ) : (

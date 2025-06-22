@@ -3,7 +3,7 @@ import AbstractShape from "../layouts/AbstractShape";
 
 function HomeLoader({ onContinue }: { onContinue: () => void }) {
   return (
-    <div className="container p-8 bg-gray-100">
+    <div className=" w-full max-w-full">
       <div className="h-full grid grid-cols-2 gap-8">
         <div className="flex flex-col justify-between ">
           <div className="mb-8 bg-blue-200 p-4 rounded">

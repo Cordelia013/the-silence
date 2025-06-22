@@ -10,14 +10,16 @@ import History from "./pages/History";
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/gallery" element={<Gallery />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/ticketing" element={<Ticketing />} />
-        <Route path="/history" element={<History />} />
-        <Route path="/info" element={<Info />} /> 
-      </Routes>
+      <div className="overflow-x-hidden max-w-screen">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/ticketing" element={<Ticketing />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }

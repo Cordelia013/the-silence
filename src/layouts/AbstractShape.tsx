@@ -8,7 +8,7 @@ const AbstractShape: React.FC = () => (
     viewBox="0 0 612 975"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    
+    className="object-contain"
   >
     <line
       x1="409.498"
