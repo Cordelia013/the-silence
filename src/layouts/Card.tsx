@@ -14,9 +14,24 @@ height: 202,
     margin: "16px auto",
 };
 
-const Card: React.FC<React.PropsWithChildren<{}>> = ({ children }) => (
+const Card: React.FC<React.PropsWithChildren<object>> = () => (
     <div style={cardStyle}>
-        {children}
+           <p
+            style={{
+                background: '#CB181F',
+                position: 'relative',
+                fontSize: '1.25rem',
+                color: 'white',
+                width: '210px',
+                height: '27px',
+               
+                textAlign: 'center',
+                padding: '5px',
+             
+            }}
+            >
+            Nouvelle Exposition
+            </p>
     </div>
 );
 
