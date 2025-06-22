@@ -18,7 +18,7 @@
 
 
 .container {
-  @apply mx-[177px];
+  @apply px-[177px];
 }
 #loader-left {
   @apply flex;

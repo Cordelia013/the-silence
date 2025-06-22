@@ -3,6 +3,7 @@ import HomeLoader from "../components/HomeLoader";
 import AbstractShape from "../layouts/AbstractShape";
 import Navbar from "../layouts/Navbar";
 import Header from "../layouts/Header";
+import Footer from "../layouts/Footer";
 
 function Home() {
   const [showLoader, setShowLoader] = useState(true);
@@ -23,8 +24,8 @@ function Home() {
             <div className="flex justify-end items-center">
               <Navbar />
             </div>
-          </div>
-        </div>
+            </div>
+            <Footer />        </div>
       )}
     </div>
   );
