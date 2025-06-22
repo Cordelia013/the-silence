@@ -4,7 +4,8 @@ const Footer = () => (
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-end',
-            height: '15vh', // Prend toute la hauteur de la fenêtre
+            height: '15vh',
+          
         }}
     >
 
@@ -40,7 +41,7 @@ const Footer = () => (
                     flexDirection: 'row',
                     height: '100%',
                     position: 'relative',
-                    top: '-5rem',
+                    top: '-6rem',
                 }}
             >
                 <p style={{ fontWeight: 'bold', paddingLeft: '40px', alignSelf: 'center' }}>Mentions légales</p>

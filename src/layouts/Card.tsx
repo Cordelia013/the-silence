@@ -5,13 +5,13 @@ const cardStyle: React.CSSProperties = {
     background: `url(${bgCard}) center/cover no-repeat`,
     position: "absolute",
     top: "60%",
-    left: "60%",
+    left: "55%",
     borderRadius: 8,
     boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
     padding: 16,
     width: "25vw",
-    height: "24vh",
-    margin: "10px auto",
+    height: "20vh",
+    margin: "5px auto",
 };
 
 const Card: React.FC<React.PropsWithChildren<object>> = () => (
@@ -26,7 +26,8 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
                 height: '3vh',
                 textAlign: 'center',
                 padding: '5px',
-              lineHeight: '3vh',
+                lineHeight: '3vh',
+              top: '-1.5rem',
              
             }}
             >
@@ -36,12 +37,11 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
             style={{
             position: "absolute",
             marginTop: "5rem",
-            top: "1vh",
-            
+            top: "-3vh",
             width: "85%",
             minWidth: "180px",
             maxWidth: "95%",
-            height: "50%",
+            height: "60%",
                 minHeight: "1vh",
                 paddingTop: "1%",
           paddingLeft: "1rem",
