@@ -1,9 +1,4 @@
-/* src/index.css */
 
-/* Reset complet avec background noir */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
 
 html {
   overflow-x: hidden;
@@ -29,10 +24,7 @@ body {
   color: #fff;
 }
 
-/* Container responsive */
-.container {
-  @apply px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-hidden;
-}
+
 
 /* Éviter les débordements d'images et SVG */
 img, svg {

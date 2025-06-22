@@ -1,0 +1,5 @@
+@layer base {
+  .container {
+    @apply px-4;
+  }
+}

@@ -4,11 +4,11 @@
 @import "@/styles/home.css";
 
 
+@layer theme, base, components, utilities;
 
-/* 2. Ensuite, les directives Tailwind standards */
-@tailwind base; 
- @tailwind components;
-@tailwind utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
 
 /* 3. Enfin, vos styles personnalisés et autres directives */
 /* ... vos classes CSS personnalisées ici ... */
@@ -16,10 +16,18 @@
 /* Note sur @config : voir la section ci-dessous */
 @config "../tailwind.config.js";
 
-
-.container {
-  @apply px-[4px]  ;
+*,
+::after,
+::before,
+::backdrop,
+::file-selector-button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0 solid;
 }
-#loader-left {
-  @apply flex;
+
+/* Tailwind responsive */
+.container {
+  @apply px-4 sm:px-6 lg:px-8;
 }
