@@ -2,9 +2,26 @@
 
 function Header() {
     return (
-        <header className="flex justify-between align-top y-4">
-        <img src="/loader.svg" alt="Loader" className="h-12" />
-        <h2 className="flex items-start text-[40px]">Musée Matisse</h2>    </header>
+        <header style={{ 
+            display: 'flex', 
+            justifyContent: 'space-between', 
+            alignItems: 'flex-start',  // Plus explicite
+            gap: '1rem', 
+            padding: '2rem 5rem' 
+          }}>
+            <img 
+              src="/loader.svg" 
+              alt="Loader" 
+              style={{ height: '3rem', display: 'block' }}  // display: block évite les problèmes baseline
+            />
+            <h2 style={{ 
+              fontSize: '2.5rem',
+              margin: 0,  // Retire les margins par défaut du h2
+              lineHeight: 1  // Contrôle la hauteur de ligne
+            }}>
+              Musée Matisse
+            </h2>
+          </header>
     );
 }
 

@@ -15,13 +15,37 @@ const menuItems: MenuItem[] = [
 ];
 
 const Navbar: React.FC = () => (
-  <nav>
-    <ul className=" w-full flex flex-col list-none p-0 gap-[1.5rem] items-end">
+  <nav
+    style={{
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-end",
+ 
+    }}
+  >
+    <ul
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        listStyle: "none",
+        padding: "10rem 5rem 0rem 0rem",
+        gap: "1.5rem",
+        alignItems: "flex-end",
+        margin: 0,
+        
+      }}
+    >
       {menuItems.map((item, idx) => (
-        <li key={idx} className="my-2">
+        <li key={idx} style={{ margin: "0.5rem 0" }}>
           <Link
             to={item.path}
-            className="no-underline text-inherit text-[1.5rem]  "
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+              fontSize: "1.5rem",
+            }}
           >
             {item.label}
           </Link>
