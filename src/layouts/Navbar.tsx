@@ -30,7 +30,7 @@ const Navbar: React.FC = () => (
         display: "flex",
         flexDirection: "column",
         listStyle: "none",
-        padding: "10rem 5rem 0rem 0rem",
+        padding: "4rem 5rem 0rem 0rem",
         gap: "1.5rem",
         alignItems: "flex-end",
         margin: 0,

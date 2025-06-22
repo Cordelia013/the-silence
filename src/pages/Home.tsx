@@ -4,6 +4,7 @@ import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
 import AbstractShape from "../layouts/AbstractShape";
 import Navbar from "../layouts/Navbar";
+import Card from "../layouts/Card";
 
 function Home() {
   const [showHome, setShowHome] = useState(false);
@@ -29,6 +30,7 @@ function Home() {
         <div >
           <AbstractShape />
         </div>
+      <Card />
         <div >
           <Navbar />
       </div>
