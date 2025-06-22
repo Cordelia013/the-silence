@@ -2,7 +2,10 @@
 
 /* 1. Placez TOUS vos @import en premier */
 @import "@/styles/home.css";
-
+/* 
+@tailwind base;
+@tailwind components; */
+@tailwind utilities;
 
 @layer theme, base, components, utilities;
 
