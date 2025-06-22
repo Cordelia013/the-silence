@@ -1,5 +1,7 @@
 // import AbstractShape from "../layouts/AbstractShape";
 
+import AbstractShape from "../layouts/AbstractShape";
+
 // function HomeLoader({ onContinue }: { onContinue: () => void }) {
 //   return (
 //     <div className="min-h-screen flex items-center justify-center px-2">
@@ -36,23 +38,29 @@
 function HomeLoader({ onContinue }: { onContinue: () => void }) {
   return (
     <div className="w-full h-screen p-8 bg-gray-100">
-      <div className="h-full grid grid-cols-3 gap-8">
-        <div className="flex flex-col justify-center items-center bg-white rounded-lg">
-        <div className="mb-8 bg-blue-200 p-4 rounded">
-            00 - zone 0
-          </div>
+      <div className="h-full grid grid-cols-2 gap-8">
+        <div className="flex flex-col justify-between items-center">
           <div className="mb-8 bg-blue-200 p-4 rounded">
-            01 - avec margin-bottom 32px
+            <p className="text-center text-lg font-space font-[300] text-[48px] relative bottom-[103px]">
+              
+            </p>
           </div>
-          <div className="mt-4 bg-green-200 p-4 rounded"
-           onClick={onContinue}
-           style={{ cursor: "pointer" }}
-          >
-            02 - avec margin-top 16px
+            <div className="mb-8 bg-blue-200 rounded flex flex-row items-center ">
+            <img src="/loader.svg" alt="logo" className="w-10 h-10 " />
+            <h1 className="text-2xl font-normal font-space text-center  font-[300]">
+              Musée Matisse
+            </h1>
+            </div>
+            <p
+            className="text-center text-lg font-space font-[300] text-[48px] relative bottom-[103px]"
+            onClick={onContinue}
+            style={{ cursor: "pointer" }}
+            >
+            clique pour continuer
+            </p>
           </div>
-        </div>
-        <div className="flex justify-center items-center m-4 bg-white rounded-lg">
-          <div className="bg-red-200 p-4 rounded">03 - avec margin 16px</div>
+        <div className="flex justify-center items-center ">
+        <AbstractShape />
         </div>
       </div>
     </div>
