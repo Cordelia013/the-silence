@@ -1,56 +1,31 @@
-import AbstractShape from "../layouts/AbstractShape";
-
-// import HomeLoader from "../components/HomeLoader"
+import { useState } from "react";
+import HomeLoader from "../components/HomeLoader";
 
 function Home() {
+  const [showHome, setShowHome] = useState(false);
+
+  if (!showHome) {
+    return (
+      <div onClick={() => setShowHome(true)}>
+        <HomeLoader />
+      </div>
+    );
+  }
+
   return (
     <div style={{
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
       gap: '1rem',
-     textAlign: 'center',
+      border: '2px solid red',
+     
       height: '100vh',
     }}>
-      <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr 1fr' }}>
-        <div style={{  }}>-</div>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0.5rem',  gap: '1rem' }}>
-          <img src="/loader.svg" alt="Chargement" />
-          <p
-            style={{
-              marginLeft: '0.5rem',
-              fontWeight: 300,
-              fontSize: '48px',
-              lineHeight: '100%',
-              letterSpacing: '0%',
-            }}
-          >
-            Musée Matisse
-          </p>
-        </div>
-        <div
-          style={{
-          display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '0.5rem',
-              fontWeight: 300,
-              fontSize: '48px',
-              lineHeight: '100%',
-              letterSpacing: '0%',
-        }}> clique pour continuer
-        </div>
-
-      </div>
-
-
-      <div
-        style={{
-          position: 'absolute',
-          right: '10rem',
-          margin: '5rem ',
-        }}
-      >
-        <AbstractShape />
-      </div>
+      
+      <div style={{ padding: '0.5rem', background: '#333' }}>Colonne 1</div>
+      <div style={{ padding: '0.5rem', background: '#666' }}>Colonne 2</div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
