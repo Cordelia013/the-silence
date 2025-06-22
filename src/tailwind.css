@@ -6,8 +6,8 @@
 
 
 /* 2. Ensuite, les directives Tailwind standards */
-/* @tailwind base;
-@tailwind components; */
+/* @tailwind base; */
+/* @tailwind components; */
 @tailwind utilities;
 
 /* 3. Enfin, vos styles personnalisés et autres directives */
@@ -18,7 +18,7 @@
 
 
 .container {
-  @apply px-[177px];
+  @apply px-[4px]  ;
 }
 #loader-left {
   @apply flex;
