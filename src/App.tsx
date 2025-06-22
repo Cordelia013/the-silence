@@ -1,14 +1,14 @@
 // src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import  Home  from "./pages/Home";
 // ... autres imports
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen w-full overflow-x-hidden">
+      <div  className="">
         <Routes>
-          <Route path="/" element={<Home />} />
+           <Route path="/" element={<Home />} /> 
           {/* ... autres routes */}
         </Routes>
       </div>
