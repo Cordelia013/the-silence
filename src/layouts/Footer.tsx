@@ -3,8 +3,9 @@ const Footer = () => (
         style={{
             display: 'flex',
             justifyContent: 'space-between',
-            alignItems: 'flex-start',
-            height: '10vh', // Prend toute la hauteur de la fenêtre
+            alignItems: 'flex-end',
+            height: '15vh',
+          
         }}
     >
 
@@ -14,22 +15,22 @@ const Footer = () => (
             <p style={{ paddingLeft: '120px' }}>10h - 18h</p>
         </div>
 
-        <div style={{ background: '#F5E256', flex: 1, height: '100%' }}>p*2</div>
+        <div style={{ background: '#F5E256', flex: 1, height: '100%' }}></div>
 
         <div style={{ background: '#00339F', flex: 2, height: '100%' }}>
             <p
             style={{
                 background: '#CB181F',
                 position: 'relative',
-                fontSize: '2.5rem',
+                fontSize: '2rem',
                 color: 'white',
                 width: '451px',
                 height: '3rem',
                 lineHeight: '51px',
                 textAlign: 'end',
                 paddingRight: '10px',
-                left: '-5vh', // Réduit l'espace horizontal
-                top: '-2.5rem', // Ajuste la position verticale
+                left: '-10vh', // Réduit l'espace horizontal
+                top: '-2rem', // Ajuste la position verticale
             }}
             >
             Musée Matisse

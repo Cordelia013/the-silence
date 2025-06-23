@@ -1,17 +1,17 @@
 import React from "react";
-import bgCard from "../../public/assets/bg-card.jpg";
+
 
 const cardStyle: React.CSSProperties = {
-    background: `url(${bgCard}) center/cover no-repeat`,
+    background: `url(/assets/bg-card.jpg) center/cover no-repeat`,
     position: "absolute",
     top: "60%",
-    left: "60%",
+    left: "55%",
     borderRadius: 8,
     boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
     padding: 16,
-width: 488,
-height: 202,
-    margin: "16px auto",
+    width: "25vw",
+    height: "20vh",
+    margin: "5px auto",
 };
 
 const Card: React.FC<React.PropsWithChildren<object>> = () => (
@@ -22,16 +22,41 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
                 position: 'relative',
                 fontSize: '1.25rem',
                 color: 'white',
-                width: '210px',
-                height: '27px',
-               
+                width: '15vw',
+                height: '3vh',
                 textAlign: 'center',
                 padding: '5px',
+                lineHeight: '3vh',
+                top: '-1.5rem',
              
             }}
             >
             Nouvelle Exposition
+        </p>
+        <div
+            style={{
+            position: "absolute",
+            marginTop: "5rem",
+            top: "-3vh",
+            width: "85%",
+            minWidth: "180px",
+            maxWidth: "95%",
+            height: "60%",
+                minHeight: "1vh",
+                paddingTop: "1%",
+          paddingLeft: "1rem",
+            background: "rgba(0, 0, 0, 0.75)",
+            boxSizing: "border-box",
+            }}
+        >
+            <h3 style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)", margin: 0 }}>RÉVOLUTION CUBISTE</h3>
+            <p style={{ marginBottom: "0.3rem", fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
+                Vivez l’éveil artistique au Musée Matisse
             </p>
+            <p style={{ marginTop: 0, fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
+                avec Braque, Paul Klee et les maîtres du Cubisme
+            </p>
+        </div>
     </div>
 );
 

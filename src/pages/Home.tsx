@@ -24,7 +24,7 @@ function Home() {
       display: 'grid',
       gridTemplateColumns: '1fr 1fr',
       gap: '1rem',
-      height: '80vh',
+      height: '72vh',
     }}>
       
         <div >
