@@ -1,8 +1,8 @@
 import React from "react";
-import bgCard from "../../public/assets/bg-card.jpg";
+
 
 const cardStyle: React.CSSProperties = {
-    background: `url(${bgCard}) center/cover no-repeat`,
+    background: `url(/assets/bg-card.jpg) center/cover no-repeat`,
     position: "absolute",
     top: "60%",
     left: "55%",
@@ -27,7 +27,7 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
                 textAlign: 'center',
                 padding: '5px',
                 lineHeight: '3vh',
-              top: '-1.5rem',
+                top: '-1.5rem',
              
             }}
             >
