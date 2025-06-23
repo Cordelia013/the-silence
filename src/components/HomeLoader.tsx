@@ -2,34 +2,38 @@ import { useState, useEffect } from "react";
 import AbstractShape from "../layouts/AbstractShape";
 
 const HomeLoader = () => {
-  const [animatedLetters, setAnimatedLetters] = useState<number[]>([]);
-  const text = "clique pour continuer";
+  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
+  const fullText = "clique pour continuer";
+  const wordToAnimate = "continuer";
+  const wordStartIndex = fullText.indexOf(wordToAnimate);
   
   // Colors from the Matisse museum theme
   const colors = ['#CB181F', '#00339F', '#F5E256', '#FFFFFF'];
   
   useEffect(() => {
     const interval = setInterval(() => {
-      setAnimatedLetters(prev => {
-        // Add a new random letter index
-        const newIndex = Math.floor(Math.random() * text.length);
-        const updated = [...prev, newIndex];
-        
-        // Keep only the last 8 animated letters to create a wave effect
-        return updated.slice(-8);
-      });
-    }, 150); // Change letter color every 150ms
+      setCurrentLetterIndex(prev => (prev + 1) % wordToAnimate.length);
+    }, 200); // Change letter every 200ms
     
     return () => clearInterval(interval);
-  }, [text.length]);
+  }, [wordToAnimate.length]);
 
   const getLetterStyle = (index: number) => {
-    const isAnimated = animatedLetters.includes(index);
-    const animationIndex = animatedLetters.indexOf(index);
+    const isInAnimatedWord = index >= wordStartIndex && index < wordStartIndex + wordToAnimate.length;
+    
+    if (!isInAnimatedWord) {
+      return {
+        color: '#FFFFFF',
+        display: 'inline-block',
+      };
+    }
+    
+    const letterIndexInWord = index - wordStartIndex;
+    const isCurrentLetter = letterIndexInWord === currentLetterIndex;
     
     return {
-      color: isAnimated 
-        ? colors[animationIndex % colors.length]
+      color: isCurrentLetter 
+        ? colors[currentLetterIndex % colors.length]
         : '#FFFFFF',
       transition: 'color 0.3s ease-in-out',
       display: 'inline-block',
@@ -80,7 +84,7 @@ const HomeLoader = () => {
             }
           }}
         >
-          {text.split('').map((letter, index) => (
+          {fullText.split('').map((letter, index) => (
             <span
               key={index}
               style={getLetterStyle(index)}
