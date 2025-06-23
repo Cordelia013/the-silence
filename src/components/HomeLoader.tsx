@@ -1,6 +1,41 @@
+import { useState, useEffect } from "react";
 import AbstractShape from "../layouts/AbstractShape";
 
 const HomeLoader = () => {
+  const [animatedLetters, setAnimatedLetters] = useState<number[]>([]);
+  const text = "clique pour continuer";
+  
+  // Colors from the Matisse museum theme
+  const colors = ['#CB181F', '#00339F', '#F5E256', '#FFFFFF'];
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setAnimatedLetters(prev => {
+        // Add a new random letter index
+        const newIndex = Math.floor(Math.random() * text.length);
+        const updated = [...prev, newIndex];
+        
+        // Keep only the last 8 animated letters to create a wave effect
+        return updated.slice(-8);
+      });
+    }, 150); // Change letter color every 150ms
+    
+    return () => clearInterval(interval);
+  }, [text.length]);
+
+  const getLetterStyle = (index: number) => {
+    const isAnimated = animatedLetters.includes(index);
+    const animationIndex = animatedLetters.indexOf(index);
+    
+    return {
+      color: isAnimated 
+        ? colors[animationIndex % colors.length]
+        : '#FFFFFF',
+      transition: 'color 0.3s ease-in-out',
+      display: 'inline-block',
+    };
+  };
+
   return (
     <div style={{
       display: 'grid',
@@ -45,7 +80,14 @@ const HomeLoader = () => {
             }
           }}
         >
-          clique pour continuer
+          {text.split('').map((letter, index) => (
+            <span
+              key={index}
+              style={getLetterStyle(index)}
+            >
+              {letter === ' ' ? '\u00A0' : letter}
+            </span>
+          ))}
         </div>
       </div>
 
