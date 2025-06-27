@@ -100,7 +100,8 @@ const Events: React.FC = () => {
             width: '100%', 
             display: 'flex', 
             justifyContent: 'flex-start',
-            marginBottom: '2rem'
+            marginBottom: '2rem',
+          
           }}>
             <SVGMorphingButton />
           </div>
