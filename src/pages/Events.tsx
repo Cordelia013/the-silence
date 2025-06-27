@@ -4,20 +4,32 @@ import Card from '../layouts/Card';
 import Footer from '../layouts/Footer';
 import Header from '../layouts/Header';
 
-
 const Events: React.FC = () => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header />
-      <main className="flex flex-1">
+      <main style={{ display: 'flex', flex: 1, minHeight: 0 }}>
         {/* Left Column */}
-        <div className="flex flex-col flex-1 justify-center items-center gap-[10px]">
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          flex: 1, 
+          justifyContent: 'center', 
+          alignItems: 'center', 
+          gap: '10px' 
+        }}>
           <Card />
           <Card />
           <Card />
         </div>
         {/* Right Column */}
-        <div className="flex flex-col justify-center items-center w-1/3">
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          justifyContent: 'center', 
+          alignItems: 'center', 
+          width: '33.333%' 
+        }}>
           <AbstractShape />
         </div>
       </main>

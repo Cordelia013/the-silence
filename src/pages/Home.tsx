@@ -18,26 +18,25 @@ function Home() {
   }
 
   return (
-    <div>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header/>
-<div style={{
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '1rem',
-      height: '72vh',
-    }}>
-      
-        <div >
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr',
+        gap: '1rem',
+        flex: 1,
+        minHeight: 0,
+      }}>
+        <div>
           <AbstractShape />
         </div>
-      <Card />
-        <div >
+        <Card />
+        <div>
           <Navbar />
-      </div>
+        </div>
       </div>
       <Footer/>
     </div>
-    
   );
 }
 
