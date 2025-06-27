@@ -49,7 +49,7 @@ function Home() {
           position: 'relative'
         }}>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Navbar fontSize="3.84rem" gap="3.32px" />
+            <Navbar fontSize="24px" gap="3.32px" />
           </div>
           <div style={{ 
             position: 'absolute',
