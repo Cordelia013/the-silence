@@ -4,13 +4,15 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
     <div style={{
         background: `url(/assets/bg-card.jpg) center/cover no-repeat`,
         position: 'relative',
-        borderRadius: 8,
-        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-        padding: 16,
+        borderRadius: 12,
+        boxShadow: "0 4px 16px rgba(0,0,0,0.15)",
+        padding: 24,
         width: "100%",
         height: "100%",
-        maxWidth: "400px",
-        maxHeight: "400px",
+        maxWidth: "450px",
+        maxHeight: "350px",
+        minWidth: "300px",
+        minHeight: "250px",
         margin: "auto",
         display: 'flex',
         flexDirection: 'column',
@@ -23,17 +25,18 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
             style={{
                 background: '#CB181F',
                 position: 'absolute',
-                top: '-8px',
-                left: '16px',
-                fontSize: '1rem',
+                top: '-10px',
+                left: '24px',
+                fontSize: '1.1rem',
                 color: 'white',
-                width: '200px',
-                height: '32px',
+                width: '220px',
+                height: '36px',
                 textAlign: 'center',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 zIndex: 2,
+                fontWeight: '500',
             }}
         >
             Nouvelle Exposition
@@ -43,34 +46,34 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
         <div
             style={{
                 position: "absolute",
-                bottom: "16px",
-                left: "16px",
-                right: "16px",
-                background: "rgba(0, 0, 0, 0.75)",
-                padding: "1rem",
-                borderRadius: "4px",
+                bottom: "24px",
+                left: "24px",
+                right: "24px",
+                background: "rgba(0, 0, 0, 0.8)",
+                padding: "1.5rem",
+                borderRadius: "8px",
                 color: "white",
             }}
         >
             <h3 style={{ 
-                fontSize: "1.25rem", 
-                margin: "0 0 0.5rem 0",
+                fontSize: "1.4rem", 
+                margin: "0 0 0.75rem 0",
                 fontWeight: "bold",
                 lineHeight: "1.2"
             }}>
                 RÉVOLUTION CUBISTE
             </h3>
             <p style={{ 
-                margin: "0 0 0.25rem 0", 
-                fontSize: "0.9rem",
-                lineHeight: "1.3"
+                margin: "0 0 0.5rem 0", 
+                fontSize: "1rem",
+                lineHeight: "1.4"
             }}>
                 Vivez l'éveil artistique au Musée Matisse
             </p>
             <p style={{ 
                 margin: "0", 
-                fontSize: "0.9rem",
-                lineHeight: "1.3"
+                fontSize: "1rem",
+                lineHeight: "1.4"
             }}>
                 avec Braque, Paul Klee et les maîtres du Cubisme
             </p>
