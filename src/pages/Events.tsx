@@ -8,21 +8,29 @@ const Events: React.FC = () => {
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header />
-      <main style={{ display: 'flex', flex: 1, minHeight: 0 }}>
-        {/* Left Column */}
+      <main style={{ display: 'flex', flex: 1, minHeight: 0, padding: '2rem' }}>
+        {/* Left Column - Multiple Cards */}
         <div style={{ 
           display: 'flex', 
           flexDirection: 'column', 
           flex: 1, 
-          justifyContent: 'center', 
+          justifyContent: 'space-around', 
           alignItems: 'center', 
-          gap: '10px' 
+          gap: '1rem',
+          paddingRight: '2rem'
         }}>
-          <Card />
-          <Card />
-          <Card />
+          <div style={{ width: '100%', height: '200px', display: 'flex', justifyContent: 'center' }}>
+            <Card />
+          </div>
+          <div style={{ width: '100%', height: '200px', display: 'flex', justifyContent: 'center' }}>
+            <Card />
+          </div>
+          <div style={{ width: '100%', height: '200px', display: 'flex', justifyContent: 'center' }}>
+            <Card />
+          </div>
         </div>
-        {/* Right Column */}
+        
+        {/* Right Column - Abstract Shape */}
         <div style={{ 
           display: 'flex', 
           flexDirection: 'column', 
