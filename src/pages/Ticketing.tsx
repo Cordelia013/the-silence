@@ -7,7 +7,7 @@ import SVGMorphingButton from '../components/SVGMorphingButton';
 
 const Events: React.FC = () => {
   return (
-    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', marginBottom:'20px' }}>
       <Header2 />
       <main style={{ 
         display: 'flex', 
