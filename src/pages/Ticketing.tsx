@@ -1,62 +1,62 @@
-import AbstractShape from '../layouts/AbstractShape'
-import Card from '../components/Card'
-import Footer from '../layouts/Footer'
-import Header from '../layouts/Header'
-import Navbar from '../layouts/Navbar'
+import React from 'react';
+import AbstractShape from '../layouts/AbstractShape';
+import Card from '../components/Card';
+import Footer from '../layouts/Footer';
+import Header2 from '../layouts/Header2';
+import SVGMorphingButton from '../components/SVGMorphingButton';
 
-function Ticketing() {
+const Events: React.FC = () => {
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Header/>
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '3rem',
-        flex: 1,
-        minHeight: 0,
+      <Header2 />
+      <main style={{ 
+        display: 'flex', 
+        flex: 1, 
+        minHeight: 0, 
         padding: '3rem 4rem',
-        alignItems: 'center',
-        maxHeight: '85vh',
+        gap: '3rem',
+        maxHeight: '85vh'
       }}>
+
+             {/* left Column - Abstract Shape */}
         <div style={{ 
           display: 'flex', 
+          flexDirection: 'column', 
           justifyContent: 'center', 
-          alignItems: 'center',
-          height: '100%',
+          alignItems: 'center', 
+          width: '33.333%',
           minHeight: '500px'
         }}>
           <AbstractShape />
         </div>
-        
+        {/* right Column - Multiple Cards */}
         <div style={{ 
-          display: 'grid', 
-          gridTemplateRows: '1fr auto',
+          display: 'flex', 
+          flexDirection: 'column', 
+          flex: 1, 
+          justifyContent: 'space-around', 
+          alignItems: 'center', 
           gap: '2rem',
-          height: '100%',
-          minHeight: '500px',
-          position: 'relative'
+          minHeight: '500px'
         }}>
-          <div style={{ 
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '90%',
-            height: '60%',
-            display: 'flex', 
-            justifyContent: 'center', 
-            alignItems: 'center' 
-          }}>
-            <Card />
+          <div style={{ width: '100%', height: '250px', display: 'flex', justifyContent: 'center' }}>
+            <Card 
+              backgroundUrl={'/assets/bg-card.jpg'} 
+              bannerText={'Nouvelle Exposition'} 
+              bannerText2={''}
+              title={'RÉVOLUTION CUBISTE'}
+              subtitle1={'Vivez l’éveil artistique au Musée Matisse'}
+              subtitle2={'avec Braque, Paul Klee et les maîtres du Cubisme'}
+            />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'flex-end', alignSelf: 'end' }}>
-            <Navbar />
-          </div>
+          <SVGMorphingButton />
         </div>
-      </div>
-      <Footer/>
+        
+   
+      </main>
+      <Footer />         
     </div>
-  )
-}
+  );
+};
 
-export default Ticketing
+export default Events;

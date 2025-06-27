@@ -2,12 +2,12 @@ import React from 'react';
 import AbstractShape from '../layouts/AbstractShape';
 import Card from '../components/Card';
 import Footer from '../layouts/Footer';
-import Header from '../layouts/Header';
+import Header2 from '../layouts/Header2';
 
 const Events: React.FC = () => {
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Header />
+      <Header2 />
       <main style={{ 
         display: 'flex', 
         flex: 1, 

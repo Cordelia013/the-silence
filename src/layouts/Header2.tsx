@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   // Initial rectangles configuration for the hamburger menu
@@ -39,6 +40,7 @@ function Header() {
   ];
 
   function AnimatedLogo() {
+    const navigate = useNavigate();
     const [active, setActive] = useState(false);
     const [open, setOpen] = useState(false);
     const [rects, setRects] = useState(initialRects);
@@ -56,10 +58,9 @@ function Header() {
     }, [active]);
 
     const handleMenuItemClick = (path: string) => {
-      // Close menu when item is clicked
+      // Fermer le menu et naviguer
       setActive(false);
-      console.log(`Navigating to: ${path}`);
-      // Add your navigation logic here
+      navigate(path);
     };
 
     return (

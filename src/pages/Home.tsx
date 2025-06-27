@@ -1,6 +1,6 @@
 import { useState } from "react";
 import HomeLoader from "../components/HomeLoader";
-import Header from "../layouts/Header";
+import Header2 from "../layouts/Header2";
 import Footer from "../layouts/Footer";
 import AbstractShape from "../layouts/AbstractShape";
 import Navbar from "../layouts/Navbar";
@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Header/>
+      <Header2/>
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr', // MODIFIABLE: Proportion des colonnes (ex: '2fr 1fr')
