@@ -112,7 +112,7 @@ const Events: React.FC = () => {
             textAlign: 'left',
             width: '100%'
           }}>
-            <h3 style={{ margin: '0 0 18px 0' }}>GRATUITÉ</h3>
+            <h3 style={{ margin: '0 0 8px 0' }}>GRATUITÉ</h3>
             <p style={{ 
               fontSize: '16px', 
               margin: '0 0 1rem 0',
