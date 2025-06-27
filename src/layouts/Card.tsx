@@ -10,9 +10,9 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
         width: "100%",
         height: "100%",
         maxWidth: "450px", // MODIFIABLE: Largeur maximale de la carte
-        maxHeight: "350px", // MODIFIABLE: Hauteur maximale de la carte
+        maxHeight: "300px", // MODIFIABLE: Hauteur maximale de la carte
         minWidth: "300px", // MODIFIABLE: Largeur minimale de la carte
-        minHeight: "250px", // MODIFIABLE: Hauteur minimale de la carte
+        minHeight: "150px", // MODIFIABLE: Hauteur minimale de la carte
         margin: "auto",
         display: 'flex',
         flexDirection: 'column',
