@@ -60,7 +60,7 @@ const Events: React.FC = () => {
             <div
               style={{
               height: '24px',
-              fontFamily: 'Space Grotesk',
+              fontFamily: 'Beatrice Deck, Arial, sans-serif',
               fontWeight: 700,
               fontSize: '24px',
               lineHeight: '100%',
@@ -78,7 +78,7 @@ const Events: React.FC = () => {
               <span
               style={{
                 marginLeft: '0.1em',
-                fontFamily: 'Beatrice Deck',
+                fontFamily: 'Beatrice Deck, Arial, sans-serif',
                 fontWeight: 700,
                 fontSize: '36px',
                 lineHeight: '100%',
@@ -100,9 +100,6 @@ const Events: React.FC = () => {
            <SVGMorphingButton />
           </div>
           
-        </div>
-        <div >
-        <h3></h3>
         </div>
       </main>
       <Footer />         
