@@ -54,11 +54,10 @@ function Home() {
           <div style={{ 
             position: 'absolute',
             bottom: '24px', // MODIFIABLE: Distance exacte du footer (24px comme demandé)
-            left: '30%', // MODIFIABLE: Position horizontale de la carte (décalée de 50% à 30% = 20% vers la gauche)
-            transform: 'translateX(-50%)', // MODIFIABLE: Centrage horizontal uniquement
+            right: '0', // MODIFIABLE: Alignement avec la navigation (même position horizontale)
             width: '90%', // MODIFIABLE: Largeur de la zone de la carte
             display: 'flex', 
-            justifyContent: 'center', 
+            justifyContent: 'flex-end', // MODIFIABLE: Alignement à droite comme la navigation
             alignItems: 'center' 
           }}>
             <Card />
