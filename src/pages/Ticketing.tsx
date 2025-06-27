@@ -44,7 +44,7 @@ const Events: React.FC = () => {
             width: '40vw',
             maxWidth: '40vw',
             boxSizing: 'border-box',
-   marginBottom:'20rem'
+ 
            
             
           }}
@@ -70,7 +70,7 @@ const Events: React.FC = () => {
               alignItems: 'center',
               boxSizing: 'border-box',
               marginBottom: '1.5rem',
-              justifyContent: 'flex-end',
+              justifyContent: 'flex-start,
               width: '100%',
              
               }}
