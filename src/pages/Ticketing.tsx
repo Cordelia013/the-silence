@@ -26,8 +26,8 @@ const Events: React.FC = () => {
           alignItems: 'center', 
           width: '60%',
           minHeight: '500px',
-          background: '#f0f4fa', // Couleur de fond pour la colonne gauche
-          borderRight: '2px solid #d0d7e2' // Bordure droite
+         
+     
         }}>
           <AbstractShape />
         </div>
@@ -43,8 +43,8 @@ const Events: React.FC = () => {
             width: '40vw',
             maxWidth: '40vw',
             boxSizing: 'border-box',
-            background: '#f2f2', // Couleur de fond pour la colonne droite
-            borderLeft: '2px solid #d0d7e2', // Bordure gauche
+           
+           
             
           }}
         >
