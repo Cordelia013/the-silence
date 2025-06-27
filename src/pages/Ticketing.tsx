@@ -16,7 +16,7 @@ const Events: React.FC = () => {
         padding: '3rem 4rem',
         gap: '3rem',
         maxHeight: '85vh',
-      marginBottom:'20rem'
+   
       }}>
 
         {/* left Column - Abstract Shape */}
@@ -44,7 +44,7 @@ const Events: React.FC = () => {
             width: '40vw',
             maxWidth: '40vw',
             boxSizing: 'border-box',
-           
+   marginBottom:'20rem'
            
             
           }}
