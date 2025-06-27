@@ -103,22 +103,11 @@ const Events: React.FC = () => {
         </div>
          <div
               style={{
-              height: '24px',
-              fontFamily: 'Beatrice Deck, Arial, sans-serif',
-              fontWeight: 700,
-              fontSize: '32px',
-              lineHeight: '100%',
-              letterSpacing: 0,
-              display: 'flex',
-              alignItems: 'center',
-              boxSizing: 'border-box',
-              marginBottom: '1.5rem',
-              justifyContent: 'flex-end',
-              width: '100%',
+        
              
               }}
             >
-              Musée Matisse individuel – 
+             GRATUITÉ
               
             </div>
       </main>
