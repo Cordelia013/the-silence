@@ -53,11 +53,10 @@ function Home() {
           </div>
           <div style={{ 
             position: 'absolute',
-            top: '50%', // MODIFIABLE: Position verticale de la carte (50% = centré)
+            bottom: '24px', // MODIFIABLE: Distance exacte du footer (24px comme demandé)
             left: '30%', // MODIFIABLE: Position horizontale de la carte (décalée de 50% à 30% = 20% vers la gauche)
-            transform: 'translate(-50%, -50%)', // MODIFIABLE: Ajustement du centrage
+            transform: 'translateX(-50%)', // MODIFIABLE: Centrage horizontal uniquement
             width: '90%', // MODIFIABLE: Largeur de la zone de la carte
-            height: '60%', // MODIFIABLE: Hauteur de la zone de la carte
             display: 'flex', 
             justifyContent: 'center', 
             alignItems: 'center' 
