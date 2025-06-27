@@ -101,15 +101,7 @@ const Events: React.FC = () => {
           </div>
           
         </div>
-         <div
-              style={{
-        
-             
-              }}
-            >
-             GRATUITÉ
-              
-            </div>
+
       </main>
       <Footer />         
     </div>
