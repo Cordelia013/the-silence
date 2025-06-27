@@ -39,7 +39,7 @@ const Events: React.FC = () => {
             flex: 1,
             justifyContent: 'center',
             alignItems: 'flex-end',
-            minHeight: '500px',
+            minHeight: '550px',
             width: '40vw',
             maxWidth: '40vw',
             boxSizing: 'border-box',
