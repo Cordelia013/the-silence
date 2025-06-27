@@ -99,7 +99,7 @@ const Events: React.FC = () => {
             <div style={{ height: '24px' }} />
            <SVGMorphingButton />
           </div>
-            <div style={{ fontSize: '32px',  fontFamily: 'Beatrice Deck, Arial, sans-serif' }} />
+            <div style={{ fontSize: '32px',  fontFamily: 'Beatrice Deck, Arial, sans-serif' }} >
           <h3>GRATUITÉ</h3>
           </div>
         </div>
