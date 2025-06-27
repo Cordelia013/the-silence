@@ -63,7 +63,14 @@ function Home() {
               margin: window.innerWidth < 600 ? '0 16px' : '0 75px', // Margin responsive
               }}
             >
-              <Card />
+              <Card 
+              backgroundUrl={'/assets/bg-card.jpg'} 
+              bannerText={'Nouvelle Exposition'} 
+              bannerText2={''}
+              title={'RÉVOLUTION CUBISTE'}
+              subtitle1={'Vivez l’éveil artistique au Musée Matisse'}
+              subtitle2={'avec Braque, Paul Klee et les maîtres du Cubisme'}
+            />
             </div>
          
         </div>
