@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         space: ['"Space Grotesk"', 'sans-serif'],
+        beatrice: ['"Beatrice Deck"', 'Arial', 'sans-serif'],
       },
       gridTemplateColumns: {
         'layout-2-1': '2fr 1fr',

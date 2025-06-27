@@ -22,12 +22,33 @@ body {
 @font-face {
   font-family: "Beatrice Deck";
   src: url("/fonts/beatrice-deck-400.woff2") format("woff2"),
-    url("/fonts/beatrice-deck-400.woff") format("woff"),
-    url("/fonts/beatrice-deck-700.woff2") format("woff2"),
-    url("/fonts/beatrice-deck-700.woff") format("woff");
-  font-weight: 400 700;
+    url("/fonts/beatrice-deck-400.woff") format("woff");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "Beatrice Deck";
+  src: url("/fonts/beatrice-deck-700.woff2") format("woff2"),
+    url("/fonts/beatrice-deck-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Classes utilitaires pour Beatrice Deck */
+.beatrice-deck {
+  font-family: "Beatrice Deck", Arial, sans-serif;
+}
+
+.beatrice-deck-400 {
+  font-family: "Beatrice Deck", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.beatrice-deck-700 {
+  font-family: "Beatrice Deck", Arial, sans-serif;
+  font-weight: 700;
 }
 
 /* Ajoutez ici d'autres @font-face pour chaque police présente dans /public/fonts/ si besoin

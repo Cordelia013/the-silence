@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   // Initial rectangles configuration for the hamburger menu
@@ -30,14 +31,16 @@ function Header() {
 
   // Menu items configuration
   const menu = [
+    { label: "Accueil", path: "/" },
+    { label: "Histoire", path: "/history" },
     { label: "Galerie", path: "/gallery" },
-    { label: "Événements", path: "/events" },
+    { label: "Events", path: "/events" },
     { label: "Billetterie", path: "/ticketing" },
-    { label: "Historique", path: "/history" },
-    { label: "Infos", path: "/info" },
+    { label: "Infos pratiques", path: "/info" },
   ];
 
   function AnimatedLogo() {
+    const navigate = useNavigate();
     const [active, setActive] = useState(false);
     const [open, setOpen] = useState(false);
     const [rects, setRects] = useState(initialRects);
@@ -55,18 +58,17 @@ function Header() {
     }, [active]);
 
     const handleMenuItemClick = (path: string) => {
-      // Close menu when item is clicked
+      // Fermer le menu et naviguer
       setActive(false);
-      console.log(`Navigating to: ${path}`);
-      // Add your navigation logic here
+      navigate(path);
     };
 
     return (
       <div style={{ position: 'relative' }}>
         {/* Hamburger/X Icon */}
         <svg
-          width="82"
-          height="71"
+          width="55"
+          height="48"
           viewBox="0 0 82 71"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -95,7 +97,7 @@ function Header() {
             position: 'fixed',
             top: '0',
             left: '0',
-            width: '400px',
+            width: '55%',
             height: '100vh',
             background: 'linear-gradient(135deg, #0D0D0D 0%, #1a1a1a 100%)',
             clipPath: open 

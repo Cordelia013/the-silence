@@ -1,10 +1,10 @@
 import { useState } from "react";
 import HomeLoader from "../components/HomeLoader";
-import Header from "../layouts/Header";
+import Header2 from "../layouts/Header2";
 import Footer from "../layouts/Footer";
 import AbstractShape from "../layouts/AbstractShape";
 import Navbar from "../layouts/Navbar";
-import Card from "../layouts/Card";
+import Card from "../components/Card";
 
 function Home() {
   const [showHome, setShowHome] = useState(false);
@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Header/>
+      <Header2/>
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr', // MODIFIABLE: Proportion des colonnes (ex: '2fr 1fr')
@@ -63,7 +63,14 @@ function Home() {
               margin: window.innerWidth < 600 ? '0 16px' : '0 75px', // Margin responsive
               }}
             >
-              <Card />
+              <Card 
+              backgroundUrl={'/assets/bg-card.jpg'} 
+              bannerText={'Nouvelle Exposition'} 
+              bannerText2={''}
+              title={'RÉVOLUTION CUBISTE'}
+              subtitle1={'Vivez l’éveil artistique au Musée Matisse'}
+              subtitle2={'avec Braque, Paul Klee et les maîtres du Cubisme'}
+            />
             </div>
          
         </div>

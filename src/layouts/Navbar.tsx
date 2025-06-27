@@ -7,11 +7,11 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
+  { label: "Histoire", path: "/history" },
   { label: "Galerie", path: "/gallery" },
-  { label: "Événements", path: "/events" },
+  { label: "Events", path: "/events" },
   { label: "Billetterie", path: "/ticketing" },
-  { label: "Historique", path: "/history" },
-  { label: "Infos", path: "/info" },
+  { label: "Infos pratiques", path: "/info" },
 ];
 
 interface NavbarProps {
@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({
   >
     <ul
       style={{
-        width: "200px",
+        width: "260px",
         display: "flex",
         flexDirection: "column",
         listStyle: "none",

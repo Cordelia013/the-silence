@@ -1,13 +1,13 @@
 import AbstractShape from '../layouts/AbstractShape'
-import Card from '../layouts/Card'
+import Card from '../components/Card'
 import Footer from '../layouts/Footer'
-import Header from '../layouts/Header'
+import Header2 from '../layouts/Header2'
 import Navbar from '../layouts/Navbar'
 
 function History() {
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Header/>
+      <Header2 />
       <div style={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
