@@ -10,7 +10,7 @@ const Card: React.FC<React.PropsWithChildren<object>> = () => (
         width: "100%",
         height: "100%",
         maxWidth: "400px",
-        maxHeight: "300px",
+        maxHeight: "400px",
         margin: "auto",
         display: 'flex',
         flexDirection: 'column',
