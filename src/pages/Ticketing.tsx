@@ -102,7 +102,7 @@ const Events: React.FC = () => {
             <div style={{ fontSize: '32px',  fontFamily: 'Beatrice Deck, Arial, sans-serif' }} >
           <h3>GRATUITÉ</h3>
           <p  style={{ fontSize: '16px' }} >(sur présentation d’un justificatif en cours de validité)</p>
-                <p style={{ fontSize: '16px' }} >>Moins de 18 ans – Étudiants -
+                <p style={{ fontSize: '16px' }} >Moins de 18 ans – Étudiants -
 Demandeurs d’emploi</p>
           </div>
         </div>
