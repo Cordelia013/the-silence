@@ -5,6 +5,9 @@ export default {
       fontFamily: {
         space: ['"Space Grotesk"', 'sans-serif'],
       },
+      gridTemplateColumns: {
+        'layout-2-1': '2fr 1fr', // ajout ici
+      },
     },
   },
   plugins: [],
