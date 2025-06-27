@@ -16,7 +16,6 @@ const Events: React.FC = () => {
         padding: '3rem 4rem',
         gap: '3rem',
         maxHeight: '85vh',
-   
       }}>
 
         {/* left Column - Abstract Shape */}
@@ -27,38 +26,28 @@ const Events: React.FC = () => {
           alignItems: 'center', 
           width: '60%',
           minHeight: '500px',
-         
-     
         }}>
           <AbstractShape />
         </div>
+        
         {/* right Column - Multiple Cards */}
         <div
           style={{
             display: 'flex',
             flexDirection: 'column',
             flex: 1,
-            justifyContent: 'center',
+            justifyContent: 'flex-start',
             alignItems: 'flex-start',
             minHeight: '550px',
             width: '40vw',
             maxWidth: '40vw',
             boxSizing: 'border-box',
- 
-           
-            
+            paddingTop: '2rem',
           }}
         >
-          <div style={{ 
-            width: '100%', 
-            display: 'flex', 
-            flexDirection: 'column', 
-            alignItems: 'flex-start',
-            boxSizing: 'border-box',
-           
-          }}>
-            <div
-              style={{
+          {/* Prix */}
+          <div
+            style={{
               height: '24px',
               fontFamily: 'Beatrice Deck, Arial, sans-serif',
               fontWeight: 700,
@@ -71,11 +60,10 @@ const Events: React.FC = () => {
               marginBottom: '1.5rem',
               justifyContent: 'flex-start',
               width: '100%',
-             
-              }}
-            >
-              Musée Matisse individuel – 
-              <span
+            }}
+          >
+            Musée Matisse individuel – 
+            <span
               style={{
                 marginLeft: '0.1em',
                 fontFamily: 'Beatrice Deck, Arial, sans-serif',
@@ -84,10 +72,18 @@ const Events: React.FC = () => {
                 lineHeight: '100%',
                 letterSpacing: 0,
               }}
-              >
+            >
               12&nbsp;€
-              </span>
-            </div>
+            </span>
+          </div>
+          
+          {/* Card alignée à gauche */}
+          <div style={{ 
+            width: '100%', 
+            display: 'flex', 
+            justifyContent: 'flex-start',
+            marginBottom: '1.5rem'
+          }}>
             <Card
               backgroundUrl={'/assets/bg-card.jpg'}
               bannerText={'Nouvelle Exposition'}
@@ -96,17 +92,42 @@ const Events: React.FC = () => {
               subtitle1={"Vivez l'éveil artistique au Musée Matisse"}
               subtitle2={'avec Braque, Paul Klee et les maîtres du Cubisme'}
             />
-            <div style={{ height: '24px' }} />
-           <SVGMorphingButton />
           </div>
-            <div style={{ fontSize: '32px',  fontFamily: 'Beatrice Deck, Arial, sans-serif' }} >
-          <h3>GRATUITÉ</h3>
-          <p  style={{ fontSize: '16px' }} >(sur présentation d'un justificatif en cours de validité)</p>
-                <p style={{ fontSize: '24px' }} >Moins de 18 ans – Étudiants -
-Demandeurs d'emploi</p>
+          
+          {/* Bouton aligné à gauche */}
+          <div style={{ 
+            width: '100%', 
+            display: 'flex', 
+            justifyContent: 'flex-start',
+            marginBottom: '2rem'
+          }}>
+            <SVGMorphingButton />
+          </div>
+          
+          {/* Section Gratuité alignée à gauche */}
+          <div style={{ 
+            fontSize: '32px',  
+            fontFamily: 'Beatrice Deck, Arial, sans-serif',
+            textAlign: 'left',
+            width: '100%'
+          }}>
+            <h3 style={{ margin: '0 0 0.5rem 0' }}>GRATUITÉ</h3>
+            <p style={{ 
+              fontSize: '16px', 
+              margin: '0 0 1rem 0',
+              fontFamily: 'Space Grotesk, sans-serif'
+            }}>
+              (sur présentation d'un justificatif en cours de validité)
+            </p>
+            <p style={{ 
+              fontSize: '24px',
+              margin: '0',
+              fontFamily: 'Beatrice Deck, Arial, sans-serif'
+            }}>
+              Moins de 18 ans – Étudiants - Demandeurs d'emploi
+            </p>
           </div>
         </div>
-
       </main>
       <Footer />         
     </div>
