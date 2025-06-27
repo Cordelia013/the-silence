@@ -24,10 +24,10 @@ const SVGMorphingButton = () => {
       rotate: 0
     },
     state2: { 
-      x: 227.621, 
-      y: 15.5, 
+      x:226, // centré horizontalement
+      y: 19.5, // centré verticalement
       width: 43, 
-      height: 43,
+      height: 43, // s'assurer que height est bien défini
       rotate: 45.5459
     }
   };
@@ -37,14 +37,14 @@ const SVGMorphingButton = () => {
       x: 29, 
       y: 0, 
       width: 43, 
-      height: 43,
+      height: 43, // s'assurer que height est bien défini
       opacity: 1
     },
     state2: { 
       x: 181.001, 
       y: 2, 
       width: 24, 
-      height: 24,
+      height: 24, // s'assurer que height est bien défini
       opacity: 1
     }
   };
@@ -54,13 +54,13 @@ const SVGMorphingButton = () => {
       x: 187, 
       y: 49, 
       width: 98, 
-      height: 22
+      height: 22 // s'assurer que height est bien défini
     },
     state2: { 
       x: 0.000488281, 
       y: 51, 
       width: 98, 
-      height: 22
+      height: 22 // s'assurer que height est bien défini
     }
   };
 
@@ -114,11 +114,13 @@ const SVGMorphingButton = () => {
   return (
     <motion.div
       className="group cursor-pointer"
-      variants={buttonVariants}
+          variants={buttonVariants}
       whileHover="hover"
       whileTap="tap"
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+          onMouseLeave={() => setIsHovered(false)}
+           
+       
     >
       <div className={`bg-white rounded-xl shadow-lg border-2 transition-all duration-300 p-6 ${
         isHovered 
@@ -134,6 +136,7 @@ const SVGMorphingButton = () => {
           variants={containerVariants}
           animate={`state${currentState}`}
           transition={{ duration: 2, ease: "easeInOut" }}
+            style={{ transform: 'translate(104px, 0px)' }} // centrer horizontalement
         >
           {/* Rectangle rouge principal */}
           <motion.rect 

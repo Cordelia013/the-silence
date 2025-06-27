@@ -87,7 +87,7 @@ const Card: React.FC<CardProps> = ({
             <p
             style={{
                 margin: "0 0 0.50rem 0",
-                fontSize: "0.9rem",
+                fontSize: "1rem",
                 lineHeight: "1.05",
                 fontFamily: "'Beatrice Deck', Arial, sans-serif",
             }}
@@ -97,7 +97,7 @@ const Card: React.FC<CardProps> = ({
             <p
             style={{
                 margin: "0",
-                fontSize: "0.9rem",
+                fontSize: "1rem",
                 fontWeight: "700",
                 lineHeight: "1.05",
                 fontFamily: "'Beatrice Deck', Arial, sans-serif",
