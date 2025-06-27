@@ -43,6 +43,7 @@ const Events: React.FC = () => {
             maxWidth: '40vw',
             boxSizing: 'border-box',
             paddingTop: '2rem',
+            transform: 'translateY(-10%)',
           }}
         >
           {/* Prix */}
