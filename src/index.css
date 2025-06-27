@@ -1,16 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap');
+
+
 body {
-  margin: 1px;
-  padding: 0;
-  box-sizing: border-box;
-  color: #fff;
-  background-color: #000;
-  overflow: hidden;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    margin: 1px;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  /* Import des polices personnalisées du dossier public/fonts/ */
+@font-face {
+  font-family: 'Beatrice Deck';
+  src: url('/fonts/BeatriceDeck-400.woff2') format('woff2'),
+       url('/fonts/BeatriceDeck-400.woff') format('woff'),
+       url('/fonts/BeatriceDeck-700.woff') format('woff'),
+       url('/fonts/BeatriceDeck-700.woff2') format('woff2');
+  font-weight: 400, 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-#container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+/* Ajoutez ici d'autres @font-face pour chaque police présente dans /public/fonts/ si besoin
+@font-face {
+  font-family: 'NomDeLaFont';
+  src: url('/fonts/NomDeLaFont.woff2') format('woff2'),
+       url('/fonts/NomDeLaFont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+*/

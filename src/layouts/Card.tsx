@@ -1,60 +1,82 @@
 import React from "react";
 
-
-const cardStyle: React.CSSProperties = {
-    background: `url(/assets/bg-card.jpg) center/cover no-repeat`,
-    position: "absolute",
-    top: "60%",
-    left: "55%",
-    borderRadius: 8,
-    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-    padding: 16,
-    width: "25vw",
-    height: "20vh",
-    margin: "5px auto",
-};
-
 const Card: React.FC<React.PropsWithChildren<object>> = () => (
-    <div style={cardStyle}>
-           <p
+    <div style={{
+        background: `url(/assets/bg-card.jpg) center/cover no-repeat`,
+        position: 'relative',
+        boxShadow: "0 4px 16px rgba(0,0,0,0.15)",
+        padding: 16, // MODIFIABLE: Espacement interne (réduit de 20px à 16px - 20%)
+        width: "100%",
+        height: "100%",
+        maxWidth: "456px", // MODIFIABLE: Largeur maximale de la carte (réduite de 360px à 288px - 20%)
+        maxHeight: "200px", // MODIFIABLE: Hauteur maximale de la carte (réduite de 176px à 141px - 20%)
+        minWidth: "192px", // MODIFIABLE: Largeur minimale de la carte (réduite de 240px à 192px - 20%)
+        minHeight: "115px", // MODIFIABLE: Hauteur minimale de la carte (réduite de 144px à 115px - 20%)
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignSelf: 'center',
+        justifySelf: 'center',
+    }}>
+        {/* Red banner for "Nouvelle Exposition" */}
+        <div
             style={{
-                background: '#CB181F',
-                position: 'relative',
-                fontSize: '1.25rem',
-                color: 'white',
-                width: '15vw',
-                height: '3vh',
-                textAlign: 'center',
-                padding: '5px',
-                lineHeight: '3vh',
-                top: '-1.5rem',
-             
+            background: '#CB181F',
+            position: 'absolute',
+            top: '6px',
+            left: '13px',
+            fontSize: '1.3rem',
+            color: 'white',
+            width: '210px',
+            height: '47px',
+            textAlign: 'center',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            zIndex: 2,
+            fontWeight: '500',
             }}
-            >
+        >
             Nouvelle Exposition
-        </p>
+        </div>
+
+        {/* Content overlay */}
         <div
             style={{
             position: "absolute",
-            marginTop: "5rem",
-            top: "-3vh",
-            width: "85%",
-            minWidth: "180px",
-            maxWidth: "95%",
-            height: "60%",
-                minHeight: "1vh",
-                paddingTop: "1%",
-          paddingLeft: "1rem",
-            background: "rgba(0, 0, 0, 0.75)",
-            boxSizing: "border-box",
+            bottom: "13px",
+            left: "8px",
+            right: "50px",
+            background: "rgba(0, 0, 0, 0.8)",
+            padding: "0.5rem",
+            color: "white",
+            fontFamily: "'Beatrice Deck', Arial, sans-serif",
             }}
         >
-            <h3 style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)", margin: 0 }}>RÉVOLUTION CUBISTE</h3>
-            <p style={{ marginBottom: "0.3rem", fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
-                Vivez l’éveil artistique au Musée Matisse
+            <h3 style={{ 
+            fontSize: "2rem",
+            margin: "0 0 1rem 0",
+            fontWeight: "bold",
+            lineHeight: "1.0",
+            fontFamily: "'Beatrice Deck', Arial, sans-serif",
+            }}>
+            RÉVOLUTION CUBISTE
+            </h3>
+            <p style={{ 
+            margin: "0 0 0.50rem 0",
+            fontSize: "1rem",
+            lineHeight: "1.05",
+            fontFamily: "'Beatrice Deck', Arial, sans-serif",
+            }}>
+            Vivez l'éveil artistique au Musée Matisse
             </p>
-            <p style={{ marginTop: 0, fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
-                avec Braque, Paul Klee et les maîtres du Cubisme
+            <p style={{ 
+            margin: "0", 
+            fontSize: "1rem",
+            lineHeight: "1.05",
+            fontFamily: "'Beatrice Deck', Arial, sans-serif",
+            }}>
+            avec Braque, Paul Klee et les maîtres du Cubisme
             </p>
         </div>
     </div>
