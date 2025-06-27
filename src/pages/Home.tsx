@@ -39,12 +39,13 @@ function Home() {
           gap: '2rem',
           height: '100%'
         }}>
+           <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+            <Navbar />
+          </div>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Card />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Navbar />
-          </div>
+         
         </div>
       </div>
       <Footer/>
