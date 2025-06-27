@@ -4,8 +4,8 @@ const Footer = () => (
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'stretch',
-            height: '15vh',
-            minHeight: '15vh',
+            height: '12vh',
+            minHeight: '80px',
             position: 'relative',
         }}
     >
@@ -17,27 +17,27 @@ const Footer = () => (
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            paddingLeft: '2rem',
+            paddingLeft: '1.5rem',
         }}>
             <p style={{ 
                 fontWeight: 'bold', 
-                margin: '0.2rem 0',
-                fontSize: '1rem',
-                lineHeight: '1.2'
+                margin: '0.1rem 0',
+                fontSize: '0.9rem',
+                lineHeight: '1.1'
             }}>
                 164, avenue des Arènes de Cimiez
             </p>
             <p style={{ 
-                margin: '0.2rem 0',
-                fontSize: '1rem',
-                lineHeight: '1.2'
+                margin: '0.1rem 0',
+                fontSize: '0.9rem',
+                lineHeight: '1.1'
             }}>
                 Ouvert tous les jours sauf le Mardi
             </p>
             <p style={{ 
-                margin: '0.2rem 0',
-                fontSize: '1rem',
-                lineHeight: '1.2'
+                margin: '0.1rem 0',
+                fontSize: '0.9rem',
+                lineHeight: '1.1'
             }}>
                 10h - 18h
             </p>
@@ -59,29 +59,29 @@ const Footer = () => (
                 style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: '2rem',
-                    paddingLeft: '2rem',
-                    paddingBottom: '1.5rem',
+                    gap: '1.5rem',
+                    paddingLeft: '1.5rem',
+                    paddingBottom: '1rem',
                 }}
             >
                 <p style={{ 
                     fontWeight: 'bold', 
                     margin: 0,
-                    fontSize: '1rem',
+                    fontSize: '0.9rem',
                     cursor: 'pointer'
                 }}>
                     Mentions légales
                 </p>
                 <p style={{ 
                     margin: 0,
-                    fontSize: '1rem',
+                    fontSize: '0.9rem',
                     cursor: 'pointer'
                 }}>
                     Politique de cookies (UE)
                 </p>
                 <p style={{ 
                     margin: 0,
-                    fontSize: '1rem',
+                    fontSize: '0.9rem',
                     cursor: 'pointer'
                 }}>
                     Newsletter
@@ -97,14 +97,14 @@ const Footer = () => (
                 top: 0,
                 background: '#CB181F',
                 color: 'white',
-                fontSize: '2rem',
+                fontSize: '1.5rem',
                 fontWeight: 'normal',
-                width: '400px',
-                height: '4rem',
+                width: '350px',
+                height: '3rem',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'flex-end',
-                paddingRight: '2rem',
+                paddingRight: '1.5rem',
                 zIndex: 10,
             }}
         >
