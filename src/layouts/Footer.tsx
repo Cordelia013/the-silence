@@ -4,52 +4,56 @@ const Footer = () => (
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'stretch',
-            height: '12vh',
-            minHeight: '80px',
+            height: '12vh', // MODIFIABLE: Hauteur du footer
+            minHeight: '80px', // MODIFIABLE: Hauteur minimale du footer
             position: 'relative',
         }}
     >
         {/* Left section - Address and hours */}
         <div style={{ 
-            background: '#00339F', 
-            flex: 1, 
+            background: '#00339F', // MODIFIABLE: Couleur de fond section gauche
+            flex: 1, // MODIFIABLE: Proportion de la section gauche
             height: '100%', 
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
-            paddingLeft: '1.5rem',
+            paddingLeft: '1.5rem', // MODIFIABLE: Espacement à gauche du texte
         }}>
             <p style={{ 
                 fontWeight: 'bold', 
                 margin: '0.1rem 0',
-                fontSize: '0.9rem',
+                fontSize: '0.9rem', // MODIFIABLE: Taille du texte adresse
                 lineHeight: '1.1'
             }}>
-                164, avenue des Arènes de Cimiez
+                164, avenue des Arènes de Cimiez {/* MODIFIABLE: Adresse */}
             </p>
             <p style={{ 
                 margin: '0.1rem 0',
-                fontSize: '0.9rem',
+                fontSize: '0.9rem', // MODIFIABLE: Taille du texte horaires
                 lineHeight: '1.1'
             }}>
-                Ouvert tous les jours sauf le Mardi
+                Ouvert tous les jours sauf le Mardi {/* MODIFIABLE: Jours d'ouverture */}
             </p>
             <p style={{ 
                 margin: '0.1rem 0',
-                fontSize: '0.9rem',
+                fontSize: '0.9rem', // MODIFIABLE: Taille du texte horaires
                 lineHeight: '1.1'
             }}>
-                10h - 18h
+                10h - 18h {/* MODIFIABLE: Heures d'ouverture */}
             </p>
         </div>
 
         {/* Middle section - Yellow */}
-        <div style={{ background: '#F5E256', flex: 1, height: '100%' }}></div>
+        <div style={{ 
+            background: '#F5E256', // MODIFIABLE: Couleur de fond section milieu
+            flex: 1, // MODIFIABLE: Proportion de la section milieu
+            height: '100%' 
+        }}></div>
 
         {/* Right section - Legal links */}
         <div style={{ 
-            background: '#00339F', 
-            flex: 2, 
+            background: '#00339F', // MODIFIABLE: Couleur de fond section droite
+            flex: 2, // MODIFIABLE: Proportion de la section droite
             height: '100%',
             display: 'flex',
             flexDirection: 'column',
@@ -59,32 +63,32 @@ const Footer = () => (
                 style={{
                     display: 'flex',
                     flexDirection: 'row',
-                    gap: '1.5rem',
-                    paddingLeft: '1.5rem',
-                    paddingBottom: '1rem',
+                    gap: '1.5rem', // MODIFIABLE: Espacement entre les liens
+                    paddingLeft: '1.5rem', // MODIFIABLE: Espacement à gauche des liens
+                    paddingBottom: '1rem', // MODIFIABLE: Espacement en bas des liens
                 }}
             >
                 <p style={{ 
                     fontWeight: 'bold', 
                     margin: 0,
-                    fontSize: '0.9rem',
+                    fontSize: '0.9rem', // MODIFIABLE: Taille du texte des liens
                     cursor: 'pointer'
                 }}>
-                    Mentions légales
+                    Mentions légales {/* MODIFIABLE: Texte du lien */}
                 </p>
                 <p style={{ 
                     margin: 0,
-                    fontSize: '0.9rem',
+                    fontSize: '0.9rem', // MODIFIABLE: Taille du texte des liens
                     cursor: 'pointer'
                 }}>
-                    Politique de cookies (UE)
+                    Politique de cookies (UE) {/* MODIFIABLE: Texte du lien */}
                 </p>
                 <p style={{ 
                     margin: 0,
-                    fontSize: '0.9rem',
+                    fontSize: '0.9rem', // MODIFIABLE: Taille du texte des liens
                     cursor: 'pointer'
                 }}>
-                    Newsletter
+                    Newsletter {/* MODIFIABLE: Texte du lien */}
                 </p>
             </div>
         </div>
@@ -93,22 +97,22 @@ const Footer = () => (
         <div
             style={{
                 position: 'absolute',
-                right: 0,
-                top: 0,
-                background: '#CB181F',
+                right: 0, // MODIFIABLE: Position horizontale du banner
+                top: 0, // MODIFIABLE: Position verticale du banner
+                background: '#CB181F', // MODIFIABLE: Couleur de fond du banner
                 color: 'white',
-                fontSize: '1.5rem',
+                fontSize: '1.5rem', // MODIFIABLE: Taille du texte du banner
                 fontWeight: 'normal',
-                width: '350px',
-                height: '3rem',
+                width: '350px', // MODIFIABLE: Largeur du banner
+                height: '3rem', // MODIFIABLE: Hauteur du banner
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'flex-end',
-                paddingRight: '1.5rem',
+                paddingRight: '1.5rem', // MODIFIABLE: Espacement à droite du texte
                 zIndex: 10,
             }}
         >
-            Musée Matisse
+            Musée Matisse {/* MODIFIABLE: Texte du banner */}
         </div>
     </footer>
 );
