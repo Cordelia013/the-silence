@@ -1,6 +1,6 @@
 import React from 'react';
 import AbstractShape from '../layouts/AbstractShape';
-import Card from '../layouts/Card';
+import Card from '../components/Card';
 import Footer from '../layouts/Footer';
 import Header from '../layouts/Header';
 
@@ -27,13 +27,35 @@ const Events: React.FC = () => {
           minHeight: '500px'
         }}>
           <div style={{ width: '100%', height: '250px', display: 'flex', justifyContent: 'center' }}>
-            <Card />
+            <Card 
+              backgroundUrl={'/assets/bg-card.jpg'} 
+              bannerText={'Nouvelle Exposition'} 
+              bannerText2={''}
+              title={'RÉVOLUTION CUBISTE'}
+              subtitle1={'Vivez l’éveil artistique au Musée Matisse'}
+              subtitle2={'avec Braque, Paul Klee et les maîtres du Cubisme'}
+            />
           </div>
           <div style={{ width: '100%', height: '250px', display: 'flex', justifyContent: 'center' }}>
-            <Card />
+            <Card 
+              backgroundUrl={'/assets/bg-card2.jpg'} 
+              bannerText={'Exposition Terminé'} 
+              bannerText2={''}
+         
+              title={'ÉCLAT BAROQUE'}
+              subtitle1={'Vivez l’intensité baroque au Musée Matisse'}
+              subtitle2={'avec Rubens, Caravage et les maîtres du clair-obscur'}
+            />
           </div>
           <div style={{ width: '100%', height: '250px', display: 'flex', justifyContent: 'center' }}>
-            <Card />
+            <Card 
+              backgroundUrl={'/assets/bg-card3.jpg'} 
+              bannerText={'Exposition Terminé'} 
+              bannerText2={''}
+              title={'PASSION ROMANTIQUE'}
+              subtitle1={'Brisez les chaînes de la raison, embrasez l’émotion !'}
+              subtitle2={'avec Delacroix, Géricault et les visionnaires du sublime'}
+            />
           </div>
         </div>
         

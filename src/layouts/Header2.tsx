@@ -30,7 +30,7 @@ function Header() {
 
   // Menu items configuration
   const menu = [
-    // { label: "Accueil", path: "/home" },
+    { label: "Accueil", path: "/" },
     { label: "Histoire", path: "/history" },
     { label: "Galerie", path: "/gallery" },
     { label: "Events", path: "/events" },

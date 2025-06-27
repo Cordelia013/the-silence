@@ -4,7 +4,7 @@ import Header from "../layouts/Header";
 import Footer from "../layouts/Footer";
 import AbstractShape from "../layouts/AbstractShape";
 import Navbar from "../layouts/Navbar";
-import Card from "../layouts/Card";
+import Card from "../components/Card";
 
 function Home() {
   const [showHome, setShowHome] = useState(false);

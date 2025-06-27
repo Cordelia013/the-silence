@@ -1,32 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap");
 
 body {
-    font-family: 'Space Grotesk', Arial, sans-serif;
-    margin: 1px;
-    padding: 0;
-    box-sizing: border-box;
-    color: #fff;
-    background-color: #000;
-    overflow: hidden;
-  }
-  
-  #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+  font-family: "Space Grotesk", Arial, sans-serif;
+  margin: 1px;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+}
 
-  /* Import des polices personnalisées du dossier public/fonts/ */
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Import des polices personnalisées du dossier public/fonts/ */
 @font-face {
-  font-family: 'Beatrice Deck';
-  src: url('/fonts/BeatriceDeck-400.woff2') format('woff2'),
-       url('/fonts/BeatriceDeck-400.woff') format('woff'),
-       url('/fonts/BeatriceDeck-700.woff') format('woff'),
-       url('/fonts/BeatriceDeck-700.woff2') format('woff2');
-  font-weight: 400, 700;
+  font-family: "Beatrice Deck";
+  src: url("/fonts/beatrice-deck-400.woff2") format("woff2"),
+    url("/fonts/beatrice-deck-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Beatrice Deck";
+  src: url("/fonts/beatrice-deck-700.woff2") format("woff2"),
+    url("/fonts/beatrice-deck-700.woff") format("woff");
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
