@@ -13,7 +13,7 @@ function Ticketing() {
         gridTemplateColumns: '1fr 1fr',
         gap: '1rem',
         flex: 1,
-        minHeight: 0,
+        minHeight: 0,ACV
       }}>
         <div>
           <AbstractShape />
