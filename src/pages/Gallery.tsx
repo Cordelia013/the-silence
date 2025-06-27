@@ -1,8 +1,7 @@
-
 import Header2 from "../layouts/Header2";
 import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
-import Carousel from "../../public/assets/carousel";
+import Carousel from "../assets/carousel";
 
 
 function Gallery() {
