@@ -37,12 +37,22 @@ function Home() {
           display: 'grid', 
           gridTemplateRows: '1fr auto',
           gap: '2rem',
-          height: '100%'
+          height: '100%',
+          position: 'relative'
         }}>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
             <Navbar />
           </div>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ 
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '100%',
+            display: 'flex', 
+            justifyContent: 'center', 
+            alignItems: 'center' 
+          }}>
             <Card />
           </div>
          
