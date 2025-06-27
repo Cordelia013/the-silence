@@ -101,6 +101,37 @@ const Events: React.FC = () => {
           </div>
           
         </div>
+         <div
+              style={{
+              height: '24px',
+              fontFamily: 'Beatrice Deck, Arial, sans-serif',
+              fontWeight: 700,
+              fontSize: '24px',
+              lineHeight: '100%',
+              letterSpacing: 0,
+              display: 'flex',
+              alignItems: 'center',
+              boxSizing: 'border-box',
+              marginBottom: '1.5rem',
+              justifyContent: 'flex-end',
+              width: '100%',
+             
+              }}
+            >
+              Musée Matisse individuel – 
+              <span
+              style={{
+                marginLeft: '0.1em',
+                fontFamily: 'Beatrice Deck, Arial, sans-serif',
+                fontWeight: 700,
+                fontSize: '36px',
+                lineHeight: '100%',
+                letterSpacing: 0,
+              }}
+              >
+              12&nbsp;€
+              </span>
+            </div>
       </main>
       <Footer />         
     </div>
