@@ -136,7 +136,7 @@ const SVGMorphingButton = () => {
           variants={containerVariants}
           animate={`state${currentState}`}
           transition={{ duration: 2, ease: "easeInOut" }}
-            style={{ transform: 'translate(104px, 0px)' }} // centrer horizontalement
+            
         >
           {/* Rectangle rouge principal */}
           <motion.rect 
