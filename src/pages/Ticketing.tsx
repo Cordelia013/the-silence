@@ -70,7 +70,7 @@ const Events: React.FC = () => {
               alignItems: 'center',
               boxSizing: 'border-box',
               marginBottom: '1.5rem',
-              justifyContent: 'flex-start,
+              justifyContent: 'flex-start',
               width: '100%',
              
               }}
