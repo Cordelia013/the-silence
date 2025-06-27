@@ -28,9 +28,9 @@ const Card: React.FC<CardProps> = ({
             width: "100%",
             height: "100%",
             maxWidth: "456px",
-            maxHeight: "300px",
+            maxHeight: "360px", // Augmenté de 300px à 360px (+20%)
             minWidth: "192px",
-            minHeight: "150px",
+            minHeight: "180px", // Augmenté de 150px à 180px (+20%)
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-start",
