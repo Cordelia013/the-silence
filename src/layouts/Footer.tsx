@@ -4,7 +4,7 @@ const Footer = () => (
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'stretch',
-            height: '12vh', // MODIFIABLE: Hauteur du footer
+            height: '10vh', // MODIFIABLE: Hauteur du footer
             minHeight: '80px', // MODIFIABLE: Hauteur minimale du footer
             position: 'relative',
         }}
@@ -96,23 +96,24 @@ const Footer = () => (
         {/* Musée Matisse banner - positioned absolutely */}
         <div
             style={{
-                position: 'absolute',
-                right: 0, // MODIFIABLE: Position horizontale du banner
-                top: 0, // MODIFIABLE: Position verticale du banner
-                background: '#CB181F', // MODIFIABLE: Couleur de fond du banner
-                color: 'white',
-                fontSize: '1.5rem', // MODIFIABLE: Taille du texte du banner
-                fontWeight: 'normal',
-                width: '350px', // MODIFIABLE: Largeur du banner
-                height: '3rem', // MODIFIABLE: Hauteur du banner
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'flex-end',
-                paddingRight: '1.5rem', // MODIFIABLE: Espacement à droite du texte
-                zIndex: 10,
+            position: 'absolute',
+            top: 0, // MODIFIABLE: Position verticale du banner
+            left: '60%',
+            transform: 'translateX(-50%)',
+            background: '#CB181F', // MODIFIABLE: Couleur de fond du banner
+            color: 'white',
+            fontSize: '1.5rem', // MODIFIABLE: Taille du texte du banner
+            fontWeight: 'normal',
+            width: '350px', // MODIFIABLE: Largeur du banner
+            height: '3rem', // MODIFIABLE: Hauteur du banner
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'end',
+            paddingRight: '1.5rem', // MODIFIABLE: Espacement à droite du texte
+            zIndex: 10,
             }}
         >
-            Musée Matisse {/* MODIFIABLE: Texte du banner */}
+            Musée Matisse{/* MODIFIABLE: Texte du banner */}
         </div>
     </footer>
 );

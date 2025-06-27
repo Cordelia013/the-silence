@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({
   >
     <ul
       style={{
-        width: "100%",
+        width: "200px",
         display: "flex",
         flexDirection: "column",
         listStyle: "none",

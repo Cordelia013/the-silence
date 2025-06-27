@@ -49,19 +49,22 @@ function Home() {
           position: 'relative'
         }}>
            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Navbar fontSize="24px" gap="3.32px" />
+            <Navbar fontSize="24px" gap="1.5rem" />
           </div>
-          <div style={{ 
-            position: 'absolute',
-            bottom: '24px', // MODIFIABLE: Distance exacte du footer (24px comme demandé)
-            right: '0', // MODIFIABLE: Alignement avec la navigation (même position horizontale)
-            width: '90%', // MODIFIABLE: Largeur de la zone de la carte
-            display: 'flex', 
-            justifyContent: 'flex-end', // MODIFIABLE: Alignement à droite comme la navigation
-            alignItems: 'center' 
-          }}>
-            <Card />
-          </div>
+            <div
+              style={{
+              position: 'absolute',
+              bottom: window.innerWidth < 600 ? '20px' : '24px', // Ajuste le bottom selon la taille de l'écran
+              right: '0%',
+              width: '100%',
+              display: 'flex',
+              justifyContent: 'flex-end',
+              height: '200px',
+              margin: window.innerWidth < 600 ? '0 16px' : '0 75px', // Margin responsive
+              }}
+            >
+              <Card />
+            </div>
          
         </div>
       </div>
