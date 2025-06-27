@@ -1,23 +1,8 @@
-/* src/index.css ou similaire */
-
-/* 1. Placez TOUS vos @import en premier */
-@import "@/styles/home.css";
-/* 
 @tailwind base;
-@tailwind components; */
+@tailwind components;
 @tailwind utilities;
 
-@layer theme, base, components, utilities;
-
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
-
-/* 3. Enfin, vos styles personnalisés et autres directives */
-/* ... vos classes CSS personnalisées ici ... */
-
-/* Note sur @config : voir la section ci-dessous */
-@config "../tailwind.config.js";
+@import "@/styles/home.css";
 
 *,
 ::after,
@@ -28,7 +13,4 @@
   padding: 0;
   box-sizing: border-box;
   border: 0 solid;
-  
 }
-
-
