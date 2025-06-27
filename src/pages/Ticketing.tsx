@@ -54,6 +54,7 @@ const Events: React.FC = () => {
             flexDirection: 'column', 
             alignItems: 'flex-end',
             boxSizing: 'border-box',
+            marginRight: '10px'
            
           }}>
             <div
@@ -92,7 +93,7 @@ const Events: React.FC = () => {
               bannerText={'Nouvelle Exposition'}
               bannerText2={''}
               title={'RÉVOLUTION CUBISTE'}
-              subtitle1={'Vivez l’éveil artistique au Musée Matisse'}
+              subtitle1={'Vivez l'éveil artistique au Musée Matisse'}
               subtitle2={'avec Braque, Paul Klee et les maîtres du Cubisme'}
             />
             <div style={{ height: '24px' }} />
