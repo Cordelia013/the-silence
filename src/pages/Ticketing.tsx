@@ -39,7 +39,7 @@ const Events: React.FC = () => {
             flexDirection: 'column',
             flex: 1,
             justifyContent: 'center',
-            alignItems: 'flex-end',
+            alignItems: 'flex-start',
             minHeight: '550px',
             width: '40vw',
             maxWidth: '40vw',
@@ -53,9 +53,8 @@ const Events: React.FC = () => {
             width: '100%', 
             display: 'flex', 
             flexDirection: 'column', 
-            alignItems: 'flex-end',
+            alignItems: 'flex-start',
             boxSizing: 'border-box',
-            marginRight: '10px'
            
           }}>
             <div
@@ -102,9 +101,9 @@ const Events: React.FC = () => {
           </div>
             <div style={{ fontSize: '32px',  fontFamily: 'Beatrice Deck, Arial, sans-serif' }} >
           <h3>GRATUITÉ</h3>
-          <p  style={{ fontSize: '16px' }} >(sur présentation d’un justificatif en cours de validité)</p>
+          <p  style={{ fontSize: '16px' }} >(sur présentation d'un justificatif en cours de validité)</p>
                 <p style={{ fontSize: '24px' }} >Moins de 18 ans – Étudiants -
-Demandeurs d’emploi</p>
+Demandeurs d'emploi</p>
           </div>
         </div>
 
