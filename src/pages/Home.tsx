@@ -54,7 +54,7 @@ function Home() {
           <div style={{ 
             position: 'absolute',
             top: '50%', // MODIFIABLE: Position verticale de la carte (50% = centré)
-            left: '50%', // MODIFIABLE: Position horizontale de la carte (50% = centré)
+            left: '30%', // MODIFIABLE: Position horizontale de la carte (décalée de 50% à 30% = 20% vers la gauche)
             transform: 'translate(-50%, -50%)', // MODIFIABLE: Ajustement du centrage
             width: '90%', // MODIFIABLE: Largeur de la zone de la carte
             height: '60%', // MODIFIABLE: Hauteur de la zone de la carte
