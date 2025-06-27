@@ -1,59 +1,77 @@
 import React from "react";
 
-
-const cardStyle: React.CSSProperties = {
-    background: `url(/assets/bg-card.jpg) center/cover no-repeat`,
-    position: "absolute",
-    top: "60%",
-    left: "55%",
-    borderRadius: 8,
-    boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
-    padding: 16,
-    width: "25vw",
-    height: "20vh",
-    margin: "5px auto",
-};
-
 const Card: React.FC<React.PropsWithChildren<object>> = () => (
-    <div style={cardStyle}>
-           <p
-            style={{
-                background: '#CB181F',
-                position: 'relative',
-                fontSize: '1.25rem',
-                color: 'white',
-                width: '15vw',
-                height: '3vh',
-                textAlign: 'center',
-                padding: '5px',
-                lineHeight: '3vh',
-                top: '-1.5rem',
-             
-            }}
-            >
-            Nouvelle Exposition
-        </p>
+    <div style={{
+        background: `url(/assets/bg-card.jpg) center/cover no-repeat`,
+        position: 'relative',
+        borderRadius: 8,
+        boxShadow: "0 2px 8px rgba(0,0,0,0.08)",
+        padding: 16,
+        width: "100%",
+        height: "100%",
+        maxWidth: "400px",
+        maxHeight: "300px",
+        margin: "auto",
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'flex-start',
+        alignSelf: 'center',
+        justifySelf: 'center',
+    }}>
+        {/* Red banner for "Nouvelle Exposition" */}
         <div
             style={{
-            position: "absolute",
-            marginTop: "5rem",
-            top: "-3vh",
-            width: "85%",
-            minWidth: "180px",
-            maxWidth: "95%",
-            height: "60%",
-                minHeight: "1vh",
-                paddingTop: "1%",
-          paddingLeft: "1rem",
-            background: "rgba(0, 0, 0, 0.75)",
-            boxSizing: "border-box",
+                background: '#CB181F',
+                position: 'absolute',
+                top: '-8px',
+                left: '16px',
+                fontSize: '1rem',
+                color: 'white',
+                width: '200px',
+                height: '32px',
+                textAlign: 'center',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                zIndex: 2,
             }}
         >
-            <h3 style={{ fontSize: "clamp(1rem, 2vw, 1.5rem)", margin: 0 }}>RÉVOLUTION CUBISTE</h3>
-            <p style={{ marginBottom: "0.3rem", fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
-                Vivez l’éveil artistique au Musée Matisse
+            Nouvelle Exposition
+        </div>
+
+        {/* Content overlay */}
+        <div
+            style={{
+                position: "absolute",
+                bottom: "16px",
+                left: "16px",
+                right: "16px",
+                background: "rgba(0, 0, 0, 0.75)",
+                padding: "1rem",
+                borderRadius: "4px",
+                color: "white",
+            }}
+        >
+            <h3 style={{ 
+                fontSize: "1.25rem", 
+                margin: "0 0 0.5rem 0",
+                fontWeight: "bold",
+                lineHeight: "1.2"
+            }}>
+                RÉVOLUTION CUBISTE
+            </h3>
+            <p style={{ 
+                margin: "0 0 0.25rem 0", 
+                fontSize: "0.9rem",
+                lineHeight: "1.3"
+            }}>
+                Vivez l'éveil artistique au Musée Matisse
             </p>
-            <p style={{ marginTop: 0, fontSize: "clamp(0.85rem, 1.5vw, 1rem)" }}>
+            <p style={{ 
+                margin: "0", 
+                fontSize: "0.9rem",
+                lineHeight: "1.3"
+            }}>
                 avec Braque, Paul Klee et les maîtres du Cubisme
             </p>
         </div>
