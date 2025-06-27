@@ -120,7 +120,7 @@ const Events: React.FC = () => {
               (sur présentation d'un justificatif en cours de validité)
             </p>
             <p style={{ 
-              fontSize: '24px',
+              fontSize: '16px',
               margin: '0',
               fontFamily: 'Beatrice Deck, Arial, sans-serif'
             }}>
