@@ -1,29 +1,66 @@
 import AbstractShape from '../layouts/AbstractShape';
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 interface HomeLoaderProps {
   onClick: () => void;
 }
+
+// Palette de couleurs du projet
+const colors = [
+  '#CB181F',
+  '#F5E256',
+  '#00339F',
+  '#CB181F',
+  '#F5E256',
+  '#00339F',
+  '#CB181F',
+  '#F5E256',
+  '#00339F',
+  '#CB181F',
+  '#F5E256',
+  '#00339F',
+  '#CB181F',
+  '#F5E256',
+  '#00339F',
+  '#CB181F',
+  '#F5E256',
+  '#00339F',
+  '#CB181F',
+  '#F5E256',
+  '#00339F',
+];
 
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
       staggerChildren: 0.1,
+      repeat: Infinity,
+      repeatDelay: 2,
     },
   },
 };
 
 const letterVariants = {
-  hidden: { color: '#6B7280', opacity: 0.7 },
+  hidden: { opacity: 0 },
   visible: {
-    color: '#F9FAFB',
     opacity: 1,
-    transition: { duration: 0.1 },
+    transition: { duration: 0.3 },
   },
 };
 
 const HomeLoader = ({ onClick }: HomeLoaderProps) => {
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  const handleClick = () => {
+    setIsAnimating(false);
+    setTimeout(() => {
+      setIsAnimating(true);
+      onClick();
+    }, 100);
+  };
+
   return (
     // Conteneur principal :
     // - Grille responsive : 1 colonne sur mobile, 2 sur écrans moyens et plus.
@@ -40,19 +77,22 @@ const HomeLoader = ({ onClick }: HomeLoaderProps) => {
           </h2>
         </div>
 
-        {/* Texte de chargement animé. La transition est maintenant automatique. */}
+        {/* Texte de chargement animé avec couleurs différentes pour chaque lettre */}
         <div className="flex select-none p-2 text-5xl font-light leading-none tracking-normal">
           <motion.div
-            className="flex"
+            className="flex cursor-pointer"
             initial="hidden"
-            animate="visible"
+            animate={isAnimating ? 'visible' : 'hidden'}
             variants={containerVariants}
-            onAnimationComplete={onClick} // Se déclenche quand l'animation du mot est finie
+            onClick={handleClick}
           >
-            {'continuer'.split('').map((char, index) => (
+            <span style={{ color: 'white' }}>cliquer pour </span>
+            {' continuer '.split('').map((char, index) => (
               <motion.span
                 key={index}
-                variants={letterVariants}>
+                variants={letterVariants}
+                style={{ color: colors[index % colors.length] }}
+              >
                 {char}
               </motion.span>
             ))}
@@ -60,7 +100,7 @@ const HomeLoader = ({ onClick }: HomeLoaderProps) => {
         </div>
       </div>
 
-          {/* Colonne de droite : Forme abstraite (visible uniquement sur les écrans moyens et plus) */}
+      {/* Colonne de droite : Forme abstraite (visible uniquement sur les écrans moyens et plus) */}
       <div className="relative hidden h-full items-center justify-center md:flex">
         <AbstractShape />
       </div>
