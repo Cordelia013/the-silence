@@ -7,32 +7,28 @@ import tablo17 from '../assets/tablo-17.jpg';
 const CurvedCarousel = ({ images = [] }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  
+
   // Use provided images or create demo slides
-  const slides = images.length > 0 ? images : [
-    tablo15,
-    tablo16,
-    tablo17,
-  ];
-  
+  const slides = images.length > 0 ? images : [tablo15, tablo16, tablo17];
+
   const totalSlides = slides.length;
-  
+
   // Navigate to next slide
   const nextSlide = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex(prev => (prev + 1) % totalSlides);
+    setCurrentIndex((prev) => (prev + 1) % totalSlides);
     setTimeout(() => setIsTransitioning(false), 600);
   }, [isTransitioning, totalSlides]);
-  
+
   // Navigate to previous slide
   const prevSlide = useCallback(() => {
     if (isTransitioning) return;
     setIsTransitioning(true);
-    setCurrentIndex(prev => (prev - 1 + totalSlides) % totalSlides);
+    setCurrentIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
     setTimeout(() => setIsTransitioning(false), 600);
   }, [isTransitioning, totalSlides]);
-  
+
   // Go to specific slide
   const goToSlide = (index: React.SetStateAction<number>) => {
     if (isTransitioning || index === currentIndex) return;
@@ -40,20 +36,20 @@ const CurvedCarousel = ({ images = [] }) => {
     setCurrentIndex(index);
     setTimeout(() => setIsTransitioning(false), 600);
   };
-  
+
   // Auto-play functionality
   useEffect(() => {
     const interval = setInterval(nextSlide, 3500);
     return () => clearInterval(interval);
   }, [nextSlide, totalSlides]);
-  
+
   // Keyboard navigation
   useEffect(() => {
-    const handleKeyPress = (e: { key: string; }) => {
+    const handleKeyPress = (e: { key: string }) => {
       if (e.key === 'ArrowLeft') prevSlide();
       if (e.key === 'ArrowRight') nextSlide();
     };
-    
+
     window.addEventListener('keydown', handleKeyPress);
     return () => window.removeEventListener('keydown', handleKeyPress);
   }, [nextSlide, prevSlide]);
@@ -62,19 +58,19 @@ const CurvedCarousel = ({ images = [] }) => {
   const getSlideStyle = (index: number) => {
     const offset = index - currentIndex;
     const absOffset = Math.abs(offset);
-    
+
     // Distance from center (in pixels)
     const translateX = offset * 220; // Space between slides
-    
+
     // Scale: all cards same size, just slight perspective effect
     const scale = Math.max(0.85, 1 - absOffset * 0.08);
-    
+
     // Rotation: simulate curve perspective
     const rotateY = offset * -12; // Degrees of rotation for curve effect
-    
+
     // Opacity: fade distant slides
     const opacity = absOffset <= 2 ? 1 : 0;
-    
+
     return {
       transform: `
         translateX(${translateX}px) 
@@ -88,7 +84,6 @@ const CurvedCarousel = ({ images = [] }) => {
 
   return (
     <div className="curved-carousel-container">
-    
       {/* Curved Carousel */}
       <div className="carousel-wrapper">
         <div className="carousel-track">
@@ -99,8 +94,8 @@ const CurvedCarousel = ({ images = [] }) => {
               style={getSlideStyle(index)}
               onClick={() => goToSlide(index)}
             >
-              <img 
-                src={slide} 
+              <img
+                src={slide}
                 alt={`Slide ${index + 1}`}
                 className="slide-image"
                 loading="lazy"
@@ -113,7 +108,9 @@ const CurvedCarousel = ({ images = [] }) => {
 
       {/* Image Counter */}
       <div className="image-counter">
-        <span>{currentIndex + 1} / {totalSlides}</span>
+        <span>
+          {currentIndex + 1} / {totalSlides}
+        </span>
       </div>
     </div>
   );
@@ -266,7 +263,7 @@ const carouselStyles = `
 `;
 
 // Inject styles
-const styleSheet = document.createElement("style");
+const styleSheet = document.createElement('style');
 styleSheet.innerText = carouselStyles;
 document.head.appendChild(styleSheet);
 

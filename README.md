@@ -1,54 +1,75 @@
-# React + TypeScript + Vite
+<div align="center">
+  <h1 align="center">The Silence</h1>
+  <p align="center">
+    Une application web moderne construite avec Vite, React, TypeScript et Tailwind CSS.
+  </p>
+</div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS"/>
+</div>
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 À propos du projet
 
-## Expanding the ESLint configuration
+Ce projet est une application web moderne construite avec un stack technique performant et populaire. Il sert de base solide pour le développement d'interfaces utilisateur réactives et bien structurées.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### ✨ Stack Technique
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Framework Frontend**: [React 19](https://react.dev/)
+- **Outil de Build**: [Vite](https://vitejs.dev/)
+- **Langage**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Routing**: [React Router DOM](https://reactrouter.com/)
+- **Linting**: [ESLint](https://eslint.org/)
+- **Gestionnaire de paquets**: [PNPM](https://pnpm.io/)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🏁 Démarrage
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Suivez ces étapes pour lancer le projet en local.
+
+### Prérequis
+
+Assurez-vous d'avoir les outils suivants installés :
+
+- [Node.js](https://nodejs.org/) (v18 ou supérieure)
+- [pnpm](https://pnpm.io/installation) (v9 ou supérieure)
+
+### Installation
+
+1.  Clonez le dépôt :
+    ```sh
+    git clone <url-du-repo>
+    ```
+2.  Naviguez dans le répertoire du projet :
+    ```sh
+    cd the-silence
+    ```
+3.  Installez les dépendances :
+    ```sh
+    pnpm install
+    ```
+
+---
+
+## 🛠️ Scripts Disponibles
+
+Dans le répertoire du projet, vous pouvez exécuter les commandes suivantes :
+
+- `pnpm dev`
+  Lance l'application en mode développement. Ouvrez http://localhost:5173 pour la voir dans votre navigateur.
+
+- `pnpm build`
+  Compile l'application pour la production dans le dossier `dist`.
+
+- `pnpm lint`
+  Analyse le code source avec ESLint pour détecter les erreurs et les problèmes de style.
+
+- `pnpm preview`
+  Lance un serveur local pour prévisualiser le build de production.

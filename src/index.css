@@ -50,14 +50,57 @@ body {
   font-family: "Beatrice Deck", Arial, sans-serif;
   font-weight: 700;
 }
-
-/* Ajoutez ici d'autres @font-face pour chaque police présente dans /public/fonts/ si besoin
-@font-face {
-  font-family: 'NomDeLaFont';
-  src: url('/fonts/NomDeLaFont.woff2') format('woff2'),
-       url('/fonts/NomDeLaFont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+/*
+  FICHIER CSS PRINCIPAL (src/index.css)
+  =====================================
+  C'est le seul fichier CSS à importer dans votre `main.tsx`.
 */
+
+/*
+  1. Directives Tailwind (INDISPENSABLE)
+  Ces lignes sont des "points d'injection". Elles seront remplacées par les styles de Tailwind
+  lors de la compilation. Ne les supprimez jamais.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@import '@/styles/home.css';
+@config "../tailwind.config.js";
+/*
+  2. Styles personnalisés et @layer (BONNE PRATIQUE)
+  Utilisez `@layer base` pour ajouter vos propres styles globaux ou surcharger
+  ceux de Tailwind de manière propre, sans créer de conflits.
+*/
+@layer base {
+  /* Définition de votre police personnalisée "Beatrice Deck" */
+  @font-face {
+    font-family: 'Beatrice Deck';
+    /* Assurez-vous que ce chemin est correct. Il est relatif au dossier `public`. */
+    src: url('/fonts/BeatriceDeck-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+
+
+  /* Styles personnalisés pour la barre de défilement (vus dans votre historique) */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Une couleur de fond sombre */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #4a4a4a; /* Une couleur plus claire pour la poignée */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6a6a6a; /* Un léger effet au survol */
+  }
+}
