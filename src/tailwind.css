@@ -1,7 +1,7 @@
 /* src/index.css ou similaire */
 
 /* 1. Placez TOUS vos @import en premier */
-@import "@/styles/home.css";
+@import '@/styles/home.css';
 /* 
 @tailwind base;
 @tailwind components;
@@ -29,5 +29,3 @@
   box-sizing: border-box;
   border: 0 solid;
 }
-
-

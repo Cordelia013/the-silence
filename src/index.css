@@ -1,31 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@200;300;400;500;600;700&display=swap');
 
+/* Import des styles de base de Swiper */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
+/* Personnalisation des flèches de navigation Swiper avec Tailwind */
+.swiper-button-next,
+.swiper-button-prev {
+  @apply bg-white p-4 rounded-full text-blue-500 shadow-md;
+}
+
+/* Ajustement de la taille des icônes SVG dans les flèches */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  @apply text-xl font-extrabold;
+}
+
+/* Personnalisation des points de pagination Swiper */
+.swiper-pagination-bullet {
+  @apply bg-white opacity-50;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-500 opacity-100;
+}
 
 body {
-    font-family: 'Space Grotesk', Arial, sans-serif;
-    margin: 1px;
-    padding: 0;
-    box-sizing: border-box;
-    color: #fff;
-    background-color: #000;
-    overflow: hidden;
-  }
-  
-  #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
+  font-family: 'Space Grotesk', Arial, sans-serif;
+  margin: 1px;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #000;
+  overflow: hidden;
+}
 
-  /* Import des polices personnalisées du dossier public/fonts/ */
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Import des polices personnalisées du dossier public/fonts/ */
 @font-face {
   font-family: 'Beatrice Deck';
-  src: url('/fonts/BeatriceDeck-400.woff2') format('woff2'),
-       url('/fonts/BeatriceDeck-400.woff') format('woff'),
-       url('/fonts/BeatriceDeck-700.woff') format('woff'),
-       url('/fonts/BeatriceDeck-700.woff2') format('woff2');
+  src:
+    url('/fonts/BeatriceDeck-400.woff2') format('woff2'),
+    url('/fonts/BeatriceDeck-400.woff') format('woff'),
+    url('/fonts/BeatriceDeck-700.woff') format('woff'),
+    url('/fonts/BeatriceDeck-700.woff2') format('woff2');
   font-weight: 400, 700;
   font-style: normal;
   font-display: swap;

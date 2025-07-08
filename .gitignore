@@ -1,24 +1,85 @@
+# ===================================================================
 # Logs
+# ===================================================================
+# General logs
 logs
 *.log
+
+# Package manager specific logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# ===================================================================
+# Dépendances
+# ===================================================================
+# The node_modules directory.
+/node_modules
+
+# ===================================================================
+# Dossiers de build et temporaires
+# ===================================================================
+# General build output
+/dist
+/dist-ssr
+/build
+/out
+
+# TypeScript build info file
+*.tsbuildinfo
+
+# Vite specific cache
+.vite
+
+# ESLint cache
+.eslintcache
+
+# ===================================================================
+# Environment & Configuration
+# ===================================================================
+# Environment variables - DO NOT COMMIT SENSITIVE DATA
+.env
+.env.*
+!.env.example
+
+# Local configuration overrides
 *.local
 
+# ===================================================================
 # Editor directories and files
+# ===================================================================
+# VS Code
 .vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
+!/.vscode/settings.json
+!/.vscode/tasks.json
+!/.vscode/launch.json
+!/.vscode/extensions.json
+
+# JetBrains (WebStorm, etc.)
+.idea/
+
+# Other editor files
+.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# ===================================================================
+# OS Generated Files
+# ===================================================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ===================================================================
+# Custom / Project-specific
+# ===================================================================
+# As discussed, to ignore folders like .ignored and .ignored_typescript
+.ignored*

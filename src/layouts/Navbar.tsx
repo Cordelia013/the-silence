@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 type MenuItem = {
   label: string;
@@ -7,11 +7,11 @@ type MenuItem = {
 };
 
 const menuItems: MenuItem[] = [
-  { label: "Galerie", path: "/gallery" },
-  { label: "Événements", path: "/events" },
-  { label: "Billetterie", path: "/ticketing" },
-  { label: "Historique", path: "/history" },
-  { label: "Infos", path: "/info" },
+  { label: 'Galerie', path: '/gallery' },
+  { label: 'Événements', path: '/events' },
+  { label: 'Billetterie', path: '/ticketing' },
+  { label: 'Historique', path: '/history' },
+  { label: 'Infos', path: '/info' },
 ];
 
 interface NavbarProps {
@@ -19,37 +19,37 @@ interface NavbarProps {
   gap?: string;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ 
-  fontSize = "1.5rem", 
-  gap = "1.5rem" 
+const Navbar: React.FC<NavbarProps> = ({
+  fontSize = '1.5rem',
+  gap = '1.5rem',
 }) => (
   <nav
     style={{
-      width: "100%",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "flex-end",
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'flex-end',
     }}
   >
     <ul
       style={{
-        width: "200px",
-        display: "flex",
-        flexDirection: "column",
-        listStyle: "none",
-        padding: "4rem 5rem 0rem 0rem",
+        width: '200px',
+        display: 'flex',
+        flexDirection: 'column',
+        listStyle: 'none',
+        padding: '4rem 5rem 0rem 0rem',
         gap: gap, // MODIFIABLE: Espacement entre les éléments de navigation
-        alignItems: "flex-end",
+        alignItems: 'flex-end',
         margin: 0,
       }}
     >
       {menuItems.map((item, idx) => (
-        <li key={idx} style={{ margin: "0" }}>
+        <li key={idx} style={{ margin: '0' }}>
           <Link
             to={item.path}
             style={{
-              textDecoration: "none",
-              color: "inherit",
+              textDecoration: 'none',
+              color: 'inherit',
               fontSize: fontSize, // MODIFIABLE: Taille de la police des liens
             }}
           >
