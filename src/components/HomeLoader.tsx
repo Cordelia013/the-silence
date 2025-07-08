@@ -14,13 +14,26 @@ const containerVariants = {
   },
 };
 
+// Palette de couleurs variées
+const colors = [
+  '#FF6B6B', // rouge
+  '#FFD93D', // jaune
+  '#6BCB77', // vert
+  '#4D96FF', // bleu
+  '#A66CFF', // violet
+  '#FF6B81', // rose
+  '#FFB26B', // orange
+  '#43E6FC', // cyan
+  '#F9FAFB', // blanc
+];
+
 const letterVariants = {
-  hidden: { color: '#6B7280', opacity: 0.7 },
-  visible: {
-    color: '#F9FAFB',
+  hidden: (custom: any) => ({ color: colors[custom % colors.length], opacity: 0.7 }),
+  visible: (custom: any) => ({
+    color: colors[custom % colors.length],
     opacity: 1,
-    transition: { duration: 0.1 },
-  },
+    transition: { duration: 10 },
+  }),
 };
 
 const HomeLoader = ({ onClick }: HomeLoaderProps) => {
@@ -52,6 +65,7 @@ const HomeLoader = ({ onClick }: HomeLoaderProps) => {
             {'continuer'.split('').map((char, index) => (
               <motion.span
                 key={index}
+                custom={index}
                 variants={letterVariants}>
                 {char}
               </motion.span>
