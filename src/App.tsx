@@ -17,12 +17,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/events" element={<Events />} />
-<<<<<<< HEAD
           <Route path="/history" element={<History />} />
           <Route path="/ticketing" element={<Ticketing />} />
           <Route path="/info" element={<Info />} />
-=======
->>>>>>> modif_structure
         </Routes>
       </div>
     </BrowserRouter>

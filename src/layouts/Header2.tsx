@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-=======
 import React, { useState } from 'react';
->>>>>>> modif_structure
+import { useNavigate } from "react-router-dom";
 
 function Header() {
   // Initial rectangles configuration for the hamburger menu
@@ -137,20 +133,11 @@ function Header() {
 
   // Menu items configuration
   const menu = [
-<<<<<<< HEAD
-    { label: "Accueil", path: "/" },
-    { label: "Histoire", path: "/history" },
-    { label: "Galerie", path: "/gallery" },
-    { label: "Events", path: "/events" },
-    { label: "Billetterie", path: "/ticketing" },
-    { label: "Infos pratiques", path: "/info" },
-=======
     { label: 'Galerie', path: '/gallery' },
     { label: 'Événements', path: '/events' },
     { label: 'Billetterie', path: '/ticketing' },
     { label: 'Historique', path: '/history' },
     { label: 'Infos', path: '/info' },
->>>>>>> modif_structure
   ];
 
   function AnimatedLogo() {
