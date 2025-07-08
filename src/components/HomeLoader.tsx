@@ -49,6 +49,7 @@ const HomeLoader = ({ onClick }: HomeLoaderProps) => {
             variants={containerVariants}
             onAnimationComplete={onClick} // Se déclenche quand l'animation du mot est finie
           >
+            cliquer pour {' '}
             {'continuer'.split('').map((char, index) => (
               <motion.span
                 key={index}
