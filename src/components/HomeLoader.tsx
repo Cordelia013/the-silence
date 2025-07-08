@@ -1,73 +1,67 @@
 import AbstractShape from '../layouts/AbstractShape';
+import { motion } from 'framer-motion';
 
-const HomeLoader = () => {
+interface HomeLoaderProps {
+  onClick: () => void;
+}
+
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const letterVariants = {
+  hidden: { color: '#6B7280', opacity: 0.7 },
+  visible: {
+    color: '#F9FAFB',
+    opacity: 1,
+    transition: { duration: 0.1 },
+  },
+};
+
+const HomeLoader = ({ onClick }: HomeLoaderProps) => {
   return (
-    <div
-      style={{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gap: '1rem',
-        textAlign: 'center',
-        height: '100vh',
-      }}
-    >
-      <div style={{ display: 'grid', gridTemplateRows: '1fr 1fr 1fr' }}>
-        <div style={{}}>-</div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '0.5rem',
-            gap: '1rem',
-          }}
-        >
-          <img src="/loader.svg" alt="Chargement" />
-          <p
-            style={{
-              marginLeft: '0.5rem',
-              fontWeight: 300,
-              fontSize: '48px',
-              lineHeight: '100%',
-              letterSpacing: '0%',
-            }}
-          >
+    // Conteneur principal :
+    // - Grille responsive : 1 colonne sur mobile, 2 sur écrans moyens et plus.
+    // - Plein écran, centré verticalement, avec un fond sombre.
+    <div className="grid h-screen w-screen grid-cols-1 items-center text-center text-white md:grid-cols-2">
+      {/* Colonne de gauche : Contenu textuel */}
+      <div className="flex h-full flex-col items-center justify-evenly gap-12 p-8">
+        <div></div>
+        {/* Logo et titre */}
+        <div className="flex items-center gap-4">
+          <img src="/loader.svg" alt="Loader" className="block h-12" />
+          <h2 className="m-0 text-5xl font-light leading-none tracking-normal">
             Musée Matisse
-          </p>
+          </h2>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: '0.5rem',
-            fontWeight: 300,
-            fontSize: '48px',
-            lineHeight: '100%',
-            letterSpacing: '0%',
-            cursor: 'pointer',
-            userSelect: 'none',
-          }}
-          onClick={(e) => {
-            // Déclenche le clic sur le parent pour ouvrir Home
-            if (e.currentTarget.parentElement?.parentElement) {
-              (
-                e.currentTarget.parentElement.parentElement as HTMLElement
-              ).click();
-            }
-          }}
-        >
-          clique pour continuer
+
+        {/* Texte de chargement animé. La transition est maintenant automatique. */}
+        <div className="flex select-none p-2 text-5xl font-light leading-none tracking-normal">
+          <motion.div
+            className="flex"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+            onAnimationComplete={onClick} // Se déclenche quand l'animation du mot est finie
+          >
+            {'continuer'.split('').map((char, index) => (
+              <motion.span
+                key={index}
+                variants={letterVariants}>
+                {char}
+              </motion.span>
+            ))}
+          </motion.div>
         </div>
       </div>
 
-      <div
-        style={{
-          position: 'absolute',
-          right: '10rem',
-          margin: '5rem ',
-        }}
-      >
+          {/* Colonne de droite : Forme abstraite (visible uniquement sur les écrans moyens et plus) */}
+      <div className="relative hidden h-full items-center justify-center md:flex">
         <AbstractShape />
       </div>
     </div>
