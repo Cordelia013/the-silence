@@ -1,6 +1,6 @@
 import AbstractShape from '../layouts/AbstractShape';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface HomeLoaderProps {
   onClick: () => void;
@@ -36,8 +36,6 @@ const containerVariants = {
   visible: {
     transition: {
       staggerChildren: 0.1,
-      repeat: Infinity,
-      repeatDelay: 2,
     },
   },
 };
@@ -52,13 +50,21 @@ const letterVariants = {
 
 const HomeLoader = ({ onClick }: HomeLoaderProps) => {
   const [isAnimating, setIsAnimating] = useState(true);
+  const [key, setKey] = useState(0);
+
+  useEffect(() => {
+    if (isAnimating) {
+      const interval = setInterval(() => {
+        setKey((prev) => prev + 1);
+      }, 3000); // Répète toutes les 3 secondes
+
+      return () => clearInterval(interval);
+    }
+  }, [isAnimating]);
 
   const handleClick = () => {
     setIsAnimating(false);
-    setTimeout(() => {
-      setIsAnimating(true);
-      onClick();
-    }, 100);
+    onClick();
   };
 
   return (
@@ -80,13 +86,14 @@ const HomeLoader = ({ onClick }: HomeLoaderProps) => {
         {/* Texte de chargement animé avec couleurs différentes pour chaque lettre */}
         <div className="flex select-none p-2 text-5xl font-light leading-none tracking-normal">
           <motion.div
+            key={key}
             className="flex cursor-pointer"
             initial="hidden"
-            animate={isAnimating ? 'visible' : 'hidden'}
+            animate="visible"
             variants={containerVariants}
             onClick={handleClick}
           >
-            <span style={{ color: 'white' }}>cliquer pour </span>
+            <span style={{ color: 'white' }}>Cliquer pour&nbsp;</span>
             {' continuer '.split('').map((char, index) => (
               <motion.span
                 key={index}
